@@ -3,11 +3,11 @@ import path from 'path';
 import { promises as fs } from 'fs';
 
 // Smart query matcher - maps user intents to JSON sections
-function getRelevantSections(query, data) {
+function getRelevantSections(query: string, data: any) {
     const q = query.toLowerCase();
 
     // Define query patterns and their corresponding JSON paths
-    const intentMap = {
+    const intentMap: { [key: string]: string[] } = {
         // AI-related queries
         'ai': ['core_services.ai_career_coach', 'key_differentiators.ai_integration', 'technology_and_innovation.ai_capabilities'],
         'artificial intelligence': ['core_services.ai_career_coach', 'key_differentiators.ai_integration'],
@@ -64,7 +64,7 @@ function getRelevantSections(query, data) {
     };
 
     // Find matching intents
-    let relevantPaths = [];
+    let relevantPaths: string[] = [];
     for (const [intent, paths] of Object.entries(intentMap)) {
         if (q.includes(intent)) {
             relevantPaths.push(...paths);
@@ -83,11 +83,11 @@ function getRelevantSections(query, data) {
         }
     }
 
-    return [...new Set(relevantPaths)]; // Remove duplicates
+    return Array.from(new Set(relevantPaths)); // Remove duplicates using Array.from()
 }
 
 // Get data from JSON path
-function getDataByPath(data, path) {
+function getDataByPath(data: any, path: string) {
     const keys = path.split('.');
     let current = data;
     for (const key of keys) {
@@ -101,11 +101,11 @@ function getDataByPath(data, path) {
 }
 
 // Format response based on data structure
-function formatResponse(data, sectionName) {
+function formatResponse(data: any, sectionName: string) {
     let response = '';
 
     // Format title
-    const title = sectionName.split('.').pop().replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const title = sectionName.split('.').pop()?.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || '';
 
     if (data.description) {
         response += `<b>${data.description}</b><br/><br/>`;
@@ -114,29 +114,29 @@ function formatResponse(data, sectionName) {
     }
 
     if (data.features && Array.isArray(data.features)) {
-        response += '<ul>' + data.features.map(f => `<li>${f}</li>`).join('') + '</ul>';
+        response += '<ul>' + data.features.map((f: string) => `<li>${f}</li>`).join('') + '</ul>';
     } else if (data.tools) {
         // Handle CV Studio tools
         response += '<b>Available Tools:</b><br/>';
-        Object.entries(data.tools).forEach(([toolName, toolData]) => {
+        Object.entries(data.tools).forEach(([toolName, toolData]: [string, any]) => {
             const formattedToolName = toolName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
             response += `<br/><b>${formattedToolName}:</b><ul>`;
             if (toolData.features) {
-                response += toolData.features.map(f => `<li>${f}</li>`).join('');
+                response += toolData.features.map((f: string) => `<li>${f}</li>`).join('');
             }
             response += '</ul>';
         });
     } else if (Array.isArray(data)) {
-        response += '<ul>' + data.map(item => `<li>${item}</li>`).join('') + '</ul>';
+        response += '<ul>' + data.map((item: any) => `<li>${item}</li>`).join('') + '</ul>';
     } else if (typeof data === 'object') {
         // Handle nested objects
-        Object.entries(data).forEach(([key, value]) => {
+        Object.entries(data).forEach(([key, value]: [string, any]) => {
             if (key !== 'description' && key !== 'features') {
                 const keyFormatted = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
                 if (typeof value === 'string') {
                     response += `<b>${keyFormatted}:</b> ${value}<br/>`;
                 } else if (Array.isArray(value)) {
-                    response += `<b>${keyFormatted}:</b><ul>${value.map(v => `<li>${v}</li>`).join('')}</ul>`;
+                    response += `<b>${keyFormatted}:</b><ul>${value.map((v: any) => `<li>${v}</li>`).join('')}</ul>`;
                 }
             }
         });
@@ -160,7 +160,7 @@ function formatResponse(data, sectionName) {
     return response;
 }
 
-export async function POST(request) {
+export async function POST(request: Request) {
     try {
         const { message } = await request.json();
         const query = message.toLowerCase();
@@ -248,12 +248,12 @@ export async function POST(request) {
                 
                 <b>🌟 What we offer:</b>
                 <ul>
-                    ${internshipData.features.slice(0, 6).map(feature => `<li>${feature}</li>`).join('')}
+                    ${internshipData.features.slice(0, 6).map((feature: string) => `<li>${feature}</li>`).join('')}
                 </ul><br/>
                 
                 <b>💼 Perfect for:</b>
                 <ul>
-                    ${internshipData.target_audience.map(audience => `<li>${audience}</li>`).join('')}
+                    ${internshipData.target_audience.map((audience: string) => `<li>${audience}</li>`).join('')}
                 </ul><br/>
                 
                 <b>🚀 Ready to explore internship opportunities that align with your interests and skills?</b><br/><br/>

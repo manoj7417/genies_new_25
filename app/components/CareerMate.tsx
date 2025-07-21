@@ -85,14 +85,14 @@ const CareerMate = () => {
             setTimeout(() => {
                 addBotMessage("Great! I'm here to help with your job search. 🎯");
                 setTimeout(() => {
-                    addBotMessage("What do you need help with? Type your question", false, 'suggestions');
+                    addBotMessage("What do you need help with? Type your question", false);
                 }, 1000);
             }, 500);
         } else {
             setTimeout(() => {
                 addBotMessage("Perfect! I'm here to help with your recruitment needs. 🏢");
                 setTimeout(() => {
-                    addBotMessage("What do you need help with? Type your question", false, 'suggestions');
+                    addBotMessage("What do you need help with? Type your question", false);
                 }, 1000);
             }, 500);
         }
