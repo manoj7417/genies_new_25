@@ -47,6 +47,16 @@ const Navbar = () => {
         setActiveDropdown(null); // Close dropdown
     };
 
+    const scrollToFeatures = () => {
+        const featuresSection = document.getElementById('features')
+        if (featuresSection) {
+            featuresSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            })
+        }
+    }
+
     // Close dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -96,12 +106,12 @@ const Navbar = () => {
 
                             <div className="hidden md:block">
                                 <div className="ml-10 flex items-baseline space-x-8">
-                                    <Link href="#services" className="text-blue-950 hover:text-blue-950 px-3 py-2 text-sm font-medium transition-colors duration-200">Services</Link>
+                                    
                                     
                                     {/* Job Seekers Dropdown */}
                                     <div className="relative group">
                                         <button 
-                                            onClick={() => handleDropdown('jobSeekers')}
+                                            onClick={() => handleDropdown('jobSeekers')} 
                                             className="flex items-center text-blue-950 hover:text-blue-950 px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
                                         >
                                             For Job Seekers
@@ -116,8 +126,8 @@ const Navbar = () => {
                                                     
                                                     if (isComingSoon) {
                                                         return (
-                                                            <button
-                                                                key={link.name}
+                                                            <button 
+                                                                key={link.name} 
                                                                 onClick={handleComingSoonClick}
                                                                 className="flex items-center w-full px-4 py-3 text-sm text-blue-950 hover:bg-blue-50 hover:text-blue-950 transition-colors duration-200 text-left"
                                                             >
@@ -128,9 +138,9 @@ const Navbar = () => {
                                                     }
                                                     
                                                     return (
-                                                        <Link
-                                                            key={link.name}
-                                                            href={link.href}
+                                                        <Link 
+                                                            key={link.name} 
+                                                            href={link.href} 
                                                             className="flex items-center px-4 py-3 text-sm text-blue-950 hover:bg-blue-50 hover:text-blue-950 transition-colors duration-200"
                                                         >
                                                             <IconComponent className="h-4 w-4 mr-3 text-blue-950" />
@@ -145,7 +155,7 @@ const Navbar = () => {
                                     {/* Recruiters Dropdown */}
                                     <div className="relative group">
                                         <button 
-                                            onClick={() => handleDropdown('recruiters')}
+                                            onClick={() => handleDropdown('recruiters')} 
                                             className="flex items-center text-blue-950 hover:text-blue-950 px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
                                         >
                                             For Recruiters
@@ -160,8 +170,8 @@ const Navbar = () => {
                                                     
                                                     if (isComingSoon) {
                                                         return (
-                                                            <button
-                                                                key={link.name}
+                                                            <button 
+                                                                key={link.name} 
                                                                 onClick={handleComingSoonClick}
                                                                 className="flex items-center w-full px-4 py-3 text-sm text-blue-950 hover:bg-blue-50 hover:text-blue-950 transition-colors duration-200 text-left"
                                                             >
@@ -172,9 +182,9 @@ const Navbar = () => {
                                                     }
                                                     
                                                     return (
-                                                        <Link
-                                                            key={link.name}
-                                                            href={link.href}
+                                                        <Link 
+                                                            key={link.name} 
+                                                            href={link.href} 
                                                             className="flex items-center px-4 py-3 text-sm text-blue-950 hover:bg-blue-50 hover:text-blue-950 transition-colors duration-200"
                                                         >
                                                             <IconComponent className="h-4 w-4 mr-3 text-blue-950" />
@@ -185,9 +195,13 @@ const Navbar = () => {
                                             </div>
                                         )}
                                     </div>
-                                    
-                                    <Link href="#about" className="text-blue-950 hover:text-blue-950 px-3 py-2 text-sm font-medium transition-colors duration-200">About</Link>
-                                    <Link href="#contact" className="text-blue-950 hover:text-blue-950 px-3 py-2 text-sm font-medium transition-colors duration-200">Contact</Link>
+
+                                    <button 
+                                        onClick={scrollToFeatures}
+                                        className="text-blue-950 hover:text-blue-950 px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
+                                    >
+                                        Services
+                                    </button>
                                 </div>
                             </div>
 
@@ -195,127 +209,138 @@ const Navbar = () => {
                                 <Link href="https://www.geniescareerhub.com/login" className="text-blue-950 hover:text-blue-950 px-4 py-2 text-sm font-medium transition-colors duration-200">
                                     Sign In
                                 </Link>
-                                <Link href="https://www.geniescareerhub.com/"  className="bg-blue-950 hover:bg-blue-900 text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
+                                <Link href="https://www.geniescareerhub.com/" className="bg-blue-950 hover:bg-blue-900 text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
                                     Get Started
                                 </Link>
                             </div>
 
+                            {/* Mobile menu button */}
                             <div className="md:hidden">
-                                <button onClick={toggleMenu} className="text-warm-700 hover:text-warm-800">
+                                <button 
+                                    onClick={toggleMenu}
+                                    className="text-blue-950 hover:text-blue-950 p-2 rounded-md transition-colors duration-200"
+                                >
                                     {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                                 </button>
                             </div>
                         </div>
+                    </div>
 
-                        {/* Mobile menu */}
-                        {isMenuOpen && (
-                            <div className="md:hidden">
-                                <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-warm-100">
-                                    <Link href="#services" className="block px-3 py-2 text-base font-medium text-blue-950 hover:text-blue-950">Services</Link>
-                                    
-                                    {/* Mobile Job Seekers Dropdown */}
-                                    <div>
-                                        <button 
-                                            onClick={() => handleDropdown('mobileJobSeekers')}
-                                            className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-blue-950 hover:text-blue-950"
-                                        >
-                                            For Job Seekers
-                                            <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === 'mobileJobSeekers' ? 'rotate-180' : ''}`} />
-                                        </button>
-                                        {activeDropdown === 'mobileJobSeekers' && (
-                                            <div className="pl-6 space-y-1">
-                                                {jobSeekerLinks.map((link) => {
-                                                    const IconComponent = link.icon;
-                                                    const isComingSoon = link.name === 'Interview Prep' || link.name === 'Salary Guide';
-                                                    
-                                                    if (isComingSoon) {
-                                                        return (
-                                                            <button
-                                                                key={link.name}
-                                                                onClick={handleComingSoonClick}
-                                                                className="flex items-center w-full px-3 py-2 text-sm text-blue-950 hover:text-blue-950 transition-colors duration-200 text-left"
-                                                            >
-                                                                <IconComponent className="h-4 w-4 mr-2" />
-                                                                {link.name}
-                                                            </button>
-                                                        );
-                                                    }
-                                                    
-                                                    return (
-                                                        <Link
-                                                            key={link.name}
-                                                            href={link.href}
-                                                            className="flex items-center px-3 py-2 text-sm text-blue-950 hover:text-blue-950 transition-colors duration-200"
-                                                        >
-                                                            <IconComponent className="h-4 w-4 mr-2" />
-                                                            {link.name}
-                                                        </Link>
-                                                    );
-                                                })}
-                                            </div>
-                                        )}
+                    {/* Mobile menu */}
+                    {isMenuOpen && (
+                        <div className="md:hidden bg-white border-t border-warm-100">
+                            <div className="px-2 pt-2 pb-3 space-y-1">
+                                <button 
+                                    onClick={() => {
+                                        scrollToFeatures();
+                                        setIsMenuOpen(false);
+                                    }}
+                                    className="block w-full text-left px-3 py-2 text-sm font-medium text-blue-950 hover:bg-blue-50 hover:text-blue-950 transition-colors duration-200"
+                                >
+                                    Services
+                                </button>
+                                
+                                {/* Mobile Job Seekers */}
+                                <div className="border-t border-warm-100 pt-2">
+                                    <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                                        For Job Seekers
                                     </div>
+                                    {jobSeekerLinks.map((link) => {
+                                        const IconComponent = link.icon;
+                                        const isComingSoon = link.name === 'Interview Prep' || link.name === 'Salary Guide';
+                                        
+                                        if (isComingSoon) {
+                                            return (
+                                                <button 
+                                                    key={link.name} 
+                                                    onClick={(e) => {
+                                                        handleComingSoonClick(e);
+                                                        setIsMenuOpen(false);
+                                                    }}
+                                                    className="flex items-center w-full px-3 py-2 text-sm text-blue-950 hover:bg-blue-50 hover:text-blue-950 transition-colors duration-200"
+                                                >
+                                                    <IconComponent className="h-4 w-4 mr-3 text-blue-950" />
+                                                    {link.name}
+                                                </button>
+                                            );
+                                        }
+                                        
+                                        return (
+                                            <Link 
+                                                key={link.name} 
+                                                href={link.href} 
+                                                onClick={() => setIsMenuOpen(false)}
+                                                className="flex items-center px-3 py-2 text-sm text-blue-950 hover:bg-blue-50 hover:text-blue-950 transition-colors duration-200"
+                                            >
+                                                <IconComponent className="h-4 w-4 mr-3 text-blue-950" />
+                                                {link.name}
+                                            </Link>
+                                        );
+                                    })}
+                                </div>
 
-                                    {/* Mobile Recruiters Dropdown */}
-                                    <div>
-                                        <button 
-                                            onClick={() => handleDropdown('mobileRecruiters')}
-                                            className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-blue-950 hover:text-blue-950"
-                                        >
-                                            For Recruiters
-                                            <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === 'mobileRecruiters' ? 'rotate-180' : ''}`} />
-                                        </button>
-                                        {activeDropdown === 'mobileRecruiters' && (
-                                            <div className="pl-6 space-y-1">
-                                                {recruiterLinks.map((link) => {
-                                                    const IconComponent = link.icon;
-                                                    const isComingSoon = link.name === 'Applicant Tracking' || link.name === 'Schedule Interviews' || link.name === 'Recruitment Analytics';
-                                                    
-                                                    if (isComingSoon) {
-                                                        return (
-                                                            <button
-                                                                key={link.name}
-                                                                onClick={handleComingSoonClick}
-                                                                className="flex items-center w-full px-3 py-2 text-sm text-blue-950 hover:text-blue-950 transition-colors duration-200 text-left"
-                                                            >
-                                                                <IconComponent className="h-4 w-4 mr-2" />
-                                                                {link.name}
-                                                            </button>
-                                                        );
-                                                    }
-                                                    
-                                                    return (
-                                                        <Link
-                                                            key={link.name}
-                                                            href={link.href}
-                                                            className="flex items-center px-3 py-2 text-sm text-blue-950 hover:text-blue-950 transition-colors duration-200"
-                                                        >
-                                                            <IconComponent className="h-4 w-4 mr-2" />
-                                                            {link.name}
-                                                        </Link>
-                                                    );
-                                                })}
-                                            </div>
-                                        )}
+                                {/* Mobile Recruiters */}
+                                <div className="border-t border-warm-100 pt-2">
+                                    <div className="px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                                        For Recruiters
                                     </div>
-                                    
-                                    <Link href="#about" className="block px-3 py-2 text-base font-medium text-blue-950 hover:text-blue-950">About</Link>
-                                    <Link href="#contact" className="block px-3 py-2 text-base font-medium text-blue-950 hover:text-blue-950">Contact</Link>
-                                    <div className="border-t border-warm-100 pt-4">
-                                        <button className="block w-full text-left px-3 py-2 text-base font-medium text-blue-950 hover:text-blue-950">
-                                            Sign In
-                                        </button>
-                                        <button className="block w-full mt-2 bg-blue-950 hover:bg-blue-900 text-white px-3 py-2 rounded-lg text-base font-medium">
-                                            Get Started
-                                        </button>
-                                    </div>
+                                    {recruiterLinks.map((link) => {
+                                        const IconComponent = link.icon;
+                                        const isComingSoon = link.name === 'Applicant Tracking' || link.name === 'Schedule Interviews' || link.name === 'Recruitment Analytics';
+                                        
+                                        if (isComingSoon) {
+                                            return (
+                                                <button 
+                                                    key={link.name} 
+                                                    onClick={(e) => {
+                                                        handleComingSoonClick(e);
+                                                        setIsMenuOpen(false);
+                                                    }}
+                                                    className="flex items-center w-full px-3 py-2 text-sm text-blue-950 hover:bg-blue-50 hover:text-blue-950 transition-colors duration-200"
+                                                >
+                                                    <IconComponent className="h-4 w-4 mr-3 text-blue-950" />
+                                                    {link.name}
+                                                </button>
+                                            );
+                                        }
+                                        
+                                        return (
+                                            <Link 
+                                                key={link.name} 
+                                                href={link.href} 
+                                                onClick={() => setIsMenuOpen(false)}
+                                                className="flex items-center px-3 py-2 text-sm text-blue-950 hover:bg-blue-50 hover:text-blue-950 transition-colors duration-200"
+                                            >
+                                                <IconComponent className="h-4 w-4 mr-3 text-blue-950" />
+                                                {link.name}
+                                            </Link>
+                                        );
+                                    })}
+                                </div>
+
+                                {/* Mobile Sign In and Get Started */}
+                                <div className="border-t border-warm-100 pt-4">
+                                    <Link 
+                                        href="https://www.geniescareerhub.com/login" 
+                                        onClick={() => setIsMenuOpen(false)}
+                                        className="block w-full text-left px-3 py-2 text-sm font-medium text-blue-950 hover:bg-blue-50 hover:text-blue-950 transition-colors duration-200"
+                                    >
+                                        Sign In
+                                    </Link>
+                                    <Link 
+                                        href="https://www.geniescareerhub.com/" 
+                                        onClick={() => setIsMenuOpen(false)}
+                                        className="block w-full mt-2 bg-blue-950 hover:bg-blue-900 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                                    >
+                                        Get Started
+                                    </Link>
                                 </div>
                             </div>
-                        )}
-                    </div>
+                        </div>
+                    )}
                 </nav>
     </div>
   )
 }
 
-export default Navbar 
+export default Navbar; 

@@ -36,7 +36,7 @@ const Footer = () => {
                                     <img src="/beta-logo.png" alt="GenieCareerHub Logo" className="h-14 w-auto mr-2" />
                                     {/* <span className="text-2xl font-bold text-gray-900">GenieCareerHub</span> */}
                                 </div>
-                                <p className="text-gray-600 leading-relaxed mb-6">
+                                <p className="text-gray-600 leading-relaxed mb-6 lg:w-[70%] w-full">
                                     Transforming careers and connecting talent with opportunity. Your success is our mission.
                                 </p>
                                 <div className="flex space-x-4">
@@ -57,16 +57,17 @@ const Footer = () => {
                                     <li><a href="https://www.geniescareerhub.com/jobs" className="hover:text-blue-950 transition-colors duration-200">Find Jobs</a></li>
                                     <li><a href="https://www.geniescareerhub.com/career-services" className="hover:text-blue-950 transition-colors duration-200">Career Coaching</a></li>
                                     <li><a href="https://www.geniescareerhub.com/resume" className="hover:text-blue-950 transition-colors duration-200">Resume Builder</a></li>
-                                    <li><a href="https://www.geniescareerhub.com/recruiter/signin?redirect=/recruiter/jobs/post" className="hover:text-blue-950 transition-colors duration-200">Post Jobs</a></li>
+                                   
                                 </ul>
                             </div>
                             <div>
                                 <h4 className="font-semibold mb-4 text-gray-900">Company</h4>
                                 <ul className="space-y-2 text-gray-600">
-                                    <li><a href="#about" className="hover:text-blue-950 transition-colors duration-200">About Us</a></li>
+                                    
                                     <li><a href="https://www.geniescareerhub.com" className="hover:text-blue-950 transition-colors duration-200">Careers</a></li>
-                                    <li><a href="#contact" className="hover:text-blue-950 transition-colors duration-200">Contact</a></li>
+                                    
                                     <li><a href="https://www.geniescareerhub.com/privacy-policy" className="hover:text-blue-950 transition-colors duration-200">Privacy Policy</a></li>
+                                    <li><a href="https://www.geniescareerhub.com/recruiter/signin?redirect=/recruiter/jobs/post" className="hover:text-blue-950 transition-colors duration-200">Post Jobs</a></li>
                                 </ul>
                             </div>
                         </div>
