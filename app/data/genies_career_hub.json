@@ -1,0 +1,197 @@
+{
+  "company": {
+    "name": "Genies Career Hub",
+    "description": "A comprehensive career development platform offering AI-powered career guidance, professional CV building, job matching, and expert career coaching services.",
+    "details": {
+      "founded": "2024",
+      "headquarters": "Global",
+      "mission": "To empower professionals worldwide with innovative career development tools and expert guidance for career success.",
+      "vision": "To be the leading global platform for career development and professional growth."
+    }
+  },
+  "core_services": {
+    "ai_career_coach": {
+      "service_name": "AI Career Coach",
+      "description": "24/7 personalized career guidance powered by artificial intelligence",
+      "features": [
+        "Personalized career path recommendations",
+        "Real-time career advice and guidance",
+        "Skill gap analysis and development plans",
+        "Industry trend insights and market analysis",
+        "Interview preparation and coaching",
+        "Salary negotiation strategies",
+        "Career transition support",
+        "Professional networking guidance"
+      ]
+    },
+    "genies_pro_cv_studio": {
+      "service_name": "Genies Pro CV Studio",
+      "description": "Advanced CV building and optimization platform with ATS-friendly templates",
+      "tools": {
+        "cv_creator": {
+          "features": [
+            "Professional ATS-optimized templates",
+            "Industry-specific CV formats",
+            "Real-time editing and preview",
+            "Multiple export formats (PDF, Word)",
+            "Customizable design elements",
+            "Professional color schemes"
+          ]
+        },
+        "cv_optimizer": {
+          "features": [
+            "ATS compatibility analysis",
+            "Keyword optimization for job descriptions",
+            "Content improvement suggestions",
+            "Format and structure recommendations",
+            "Readability and impact scoring",
+            "Industry-specific optimization"
+          ]
+        },
+        "cv_match": {
+          "features": [
+            "Job description analysis",
+            "CV-to-job matching algorithm",
+            "Gap identification and recommendations",
+            "Customization suggestions",
+            "Application success probability",
+            "Competitive analysis"
+          ]
+        }
+      }
+    },
+    "career_coaching_services": {
+      "service_name": "Expert Career Coaching",
+      "description": "One-on-one career coaching with internationally acclaimed career coaches",
+      "features": [
+        "Personalized career strategy sessions",
+        "Career transition guidance",
+        "Leadership development coaching",
+        "Personal brand building",
+        "Networking strategy development",
+        "Interview preparation and mock interviews",
+        "Salary negotiation coaching",
+        "Work-life balance guidance"
+      ]
+    },
+    "job_matching_and_career_discovery": {
+      "service_name": "Job Matching & Career Discovery",
+      "description": "AI-powered job matching and career path discovery platform",
+      "features": [
+        "Intelligent job recommendations",
+        "Career path exploration tools",
+        "Skills-based job matching",
+        "Industry and role discovery",
+        "Remote and global opportunities",
+        "Company culture matching",
+        "Salary benchmarking",
+        "Application tracking and management"
+      ]
+    },
+    "psychometric_testing": {
+      "service_name": "Psychometric Testing",
+      "description": "Comprehensive personality and career aptitude assessments",
+      "features": [
+        "Personality type analysis",
+        "Career aptitude assessments",
+        "Leadership potential evaluation",
+        "Team dynamics compatibility",
+        "Stress management assessment",
+        "Communication style analysis",
+        "Decision-making style evaluation",
+        "Career satisfaction measurement"
+      ]
+    },
+    "internship_program": {
+      "service_name": "Internship Program",
+      "description": "Comprehensive internship opportunities for students and early-career professionals",
+      "features": [
+        "Curated internship opportunities across industries",
+        "Remote and in-person internship options",
+        "Mentorship and guidance programs",
+        "Skill development workshops",
+        "Networking events and meetups",
+        "Career development resources",
+        "Performance tracking and feedback",
+        "Potential full-time employment pathways"
+      ],
+      "target_audience": [
+        "University students seeking practical experience",
+        "Recent graduates looking to build their portfolio",
+        "Career changers wanting to explore new fields",
+        "International students seeking global opportunities",
+        "Part-time students balancing work and study",
+        "Early-career professionals seeking growth"
+      ]
+    }
+  },
+  "key_differentiators": {
+    "ai_integration": {
+      "description": "Advanced AI integration across all services for personalized experiences",
+      "features": [
+        "Machine learning-powered recommendations",
+        "Natural language processing for career guidance",
+        "Predictive analytics for career success",
+        "Automated skill assessment and gap analysis",
+        "Intelligent job matching algorithms",
+        "Personalized learning paths"
+      ]
+    },
+    "ats_friendly_solutions": {
+      "description": "ATS-optimized CV and application materials for maximum visibility",
+      "features": [
+        "ATS-compatible CV templates",
+        "Keyword optimization tools",
+        "Format validation and testing",
+        "Industry-specific optimization",
+        "Real-time ATS scoring",
+        "Application success tracking"
+      ]
+    }
+  },
+  "technology_and_innovation": {
+    "ai_capabilities": {
+      "description": "Cutting-edge AI technology for career development",
+      "features": [
+        "Natural language processing for career conversations",
+        "Machine learning for personalized recommendations",
+        "Predictive analytics for career outcomes",
+        "Automated content generation and optimization",
+        "Intelligent matching algorithms",
+        "Real-time learning and adaptation"
+      ]
+    }
+  },
+  "industry_coverage": {
+    "description": "Comprehensive coverage across diverse industries and sectors",
+    "domains": [
+      "Technology and Software Development",
+      "Finance and Banking",
+      "Healthcare and Pharmaceuticals",
+      "Marketing and Advertising",
+      "Consulting and Strategy",
+      "Education and Training",
+      "Manufacturing and Engineering",
+      "Retail and E-commerce",
+      "Non-profit and Social Impact",
+      "Government and Public Sector",
+      "Media and Entertainment",
+      "Real Estate and Construction"
+    ]
+  },
+  "service_accessibility": {
+    "contact_methods": {
+      "email": "hello@geniescareerhub.com",
+      "phone": "+1 (555) 123-4567",
+      "website": "https://www.geniescareerhub.com"
+    },
+    "operating_schedule": {
+      "ai_services": "24/7 availability",
+      "human_coaching": "Monday-Friday, 9 AM - 6 PM (Global time zones)",
+      "support": "24/7 customer support via chat and email"
+    }
+  },
+  "limitations_and_scope": {
+    "beyond_scope_notice": "I specialize specifically in career-related services. I can only assist with career growth, job search, resume building, interview preparation, internship opportunities, professional skills, and workplace guidance. For queries beyond these career and job-related services, other topics are outside my scope of expertise."
+  }
+} 
