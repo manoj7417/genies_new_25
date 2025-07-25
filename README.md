@@ -4,11 +4,11 @@ A stunning, modern landing page for Genies Career Hub built with Next.js and Tai
 
 ## 🚀 Features
 
-- **Responsive Design**: Optimized for all devices and screen sizes
+- **Responsive Design**: Optimised for all devices and screen sizes
 - **Modern UI/UX**: Beautiful gradients, animations, and hover effects
 - **Fast Performance**: Built with Next.js for optimal loading speeds
 - **Accessible**: WCAG compliant design with proper semantic HTML
-- **SEO Optimized**: Meta tags and structured content for search engines
+- **SEO Optimised**: Meta tags and structured content for search engines
 
 ## 🎨 Design Highlights
 

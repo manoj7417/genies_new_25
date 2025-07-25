@@ -33,6 +33,7 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const [showToast, setShowToast] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const navRef = useRef<HTMLDivElement>(null);
     
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -48,7 +49,7 @@ const Navbar = () => {
     };
 
     const scrollToFeatures = () => {
-        const featuresSection = document.getElementById('features')
+        const featuresSection = document.getElementById('core-features')
         if (featuresSection) {
             featuresSection.scrollIntoView({ 
                 behavior: 'smooth',
@@ -56,6 +57,17 @@ const Navbar = () => {
             })
         }
     }
+
+    // Handle scroll effect
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            setIsScrolled(scrollTop > 50);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     // Close dropdown when clicking outside
     useEffect(() => {
@@ -94,7 +106,11 @@ const Navbar = () => {
             isVisible={showToast} 
             onClose={() => setShowToast(false)} 
         />
-        <nav ref={navRef} className="bg-white shadow-sm border-b border-warm-100 fixed w-full top-0 z-50">
+        <nav ref={navRef} className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+            isScrolled 
+                ? 'bg-white shadow-sm border-b border-warm-100' 
+                : 'bg-transparent'
+        }`}>
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex justify-between items-center h-16">
                             <div className="flex items-center">
@@ -112,7 +128,11 @@ const Navbar = () => {
                                     <div className="relative group">
                                         <button 
                                             onClick={() => handleDropdown('jobSeekers')} 
-                                            className="flex items-center text-blue-950 hover:text-blue-950 px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
+                                            className={`flex items-center px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer ${
+                                                isScrolled 
+                                                    ? 'text-blue-950 hover:text-blue-950' 
+                                                    : 'text-white hover:text-gray-200'
+                                            }`}
                                         >
                                             For Job Seekers
                                             <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${activeDropdown === 'jobSeekers' ? 'rotate-180' : ''}`} />
@@ -156,7 +176,11 @@ const Navbar = () => {
                                     <div className="relative group">
                                         <button 
                                             onClick={() => handleDropdown('recruiters')} 
-                                            className="flex items-center text-blue-950 hover:text-blue-950 px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
+                                            className={`flex items-center px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer ${
+                                                isScrolled 
+                                                    ? 'text-blue-950 hover:text-blue-950' 
+                                                    : 'text-white hover:text-gray-200'
+                                            }`}
                                         >
                                             For Recruiters
                                             <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${activeDropdown === 'recruiters' ? 'rotate-180' : ''}`} />
@@ -198,7 +222,11 @@ const Navbar = () => {
 
                                     <button 
                                         onClick={scrollToFeatures}
-                                        className="text-blue-950 hover:text-blue-950 px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer"
+                                        className={`px-3 py-2 text-sm font-medium transition-colors duration-200 cursor-pointer ${
+                                            isScrolled 
+                                                ? 'text-blue-950 hover:text-blue-950' 
+                                                : 'text-white hover:text-gray-200'
+                                        }`}
                                     >
                                         Services
                                     </button>
@@ -206,7 +234,11 @@ const Navbar = () => {
                             </div>
 
                             <div className="hidden md:flex items-center space-x-4">
-                                <Link href="https://www.geniescareerhub.com/login" className="text-blue-950 hover:text-blue-950 px-4 py-2 text-sm font-medium transition-colors duration-200">
+                                <Link href="https://www.geniescareerhub.com/login" className={`px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+                                    isScrolled 
+                                        ? 'text-blue-950 hover:text-blue-950' 
+                                        : 'text-white hover:text-gray-200'
+                                }`}>
                                     Sign In
                                 </Link>
                                 <Link href="https://www.geniescareerhub.com/" className="bg-blue-950 hover:bg-blue-900 text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
@@ -218,7 +250,11 @@ const Navbar = () => {
                             <div className="md:hidden">
                                 <button 
                                     onClick={toggleMenu}
-                                    className="text-blue-950 hover:text-blue-950 p-2 rounded-md transition-colors duration-200"
+                                    className={`p-2 rounded-md transition-colors duration-200 ${
+                                        isScrolled 
+                                            ? 'text-blue-950 hover:text-blue-950' 
+                                            : 'text-white hover:text-gray-200'
+                                    }`}
                                 >
                                     {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                                 </button>

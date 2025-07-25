@@ -8,7 +8,7 @@ export default function Features() {
     {
       icon: Search,
       title: "AI-Powered CV Builder",
-      description: "Create professional, ATS-optimized CVs with our intelligent builder that adapts to your industry and experience level.",
+      description: "Create professional, ATS-Optimised CVs with our intelligent builder that adapts to your industry and experience level.",
       color: "from-blue-500 to-cyan-500"
     },
     {
