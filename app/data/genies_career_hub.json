@@ -123,6 +123,34 @@
         "Part-time students balancing work and study",
         "Early-career professionals seeking growth"
       ]
+    },
+    "recruitment_services": {
+      "service_name": "Recruitment Services",
+      "description": "Comprehensive recruitment and talent acquisition platform for employers and recruiters",
+      "features": [
+        "Advanced job posting and management platform",
+        "AI-powered candidate search and matching",
+        "Comprehensive candidate database access",
+        "Applicant tracking and pipeline management",
+        "ATS integration and optimization",
+        "Recruitment analytics and performance metrics",
+        "Employer branding and company profile management",
+        "Interview scheduling and coordination tools",
+        "Background verification services",
+        "Onboarding support and documentation",
+        "Multi-channel recruitment campaigns",
+        "Talent pool building and nurturing"
+      ],
+      "target_audience": [
+        "HR professionals and recruiters",
+        "Hiring managers and team leads",
+        "Startups and growing companies",
+        "Enterprise organizations",
+        "Recruitment agencies",
+        "Talent acquisition specialists",
+        "Employers seeking qualified candidates",
+        "Companies looking to streamline hiring"
+      ]
     }
   },
   "key_differentiators": {

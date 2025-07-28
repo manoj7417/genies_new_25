@@ -60,7 +60,44 @@ function getRelevantSections(query: string, data: any) {
 
         // Internships (backup detection)
         'internship': ['core_services.internship_program'],
-        'intern': ['core_services.internship_program']
+        'intern': ['core_services.internship_program'],
+
+        // Recruitment and hiring
+        'recruit': ['recruitment_services'],
+        'recruitment': ['recruitment_services'],
+        'hire': ['recruitment_services'],
+        'hiring': ['recruitment_services'],
+        'post job': ['recruitment_services'],
+        'post a job': ['recruitment_services'],
+        'post jobs': ['recruitment_services'],
+        'find candidates': ['recruitment_services'],
+        'find candidate': ['recruitment_services'],
+        'search candidates': ['recruitment_services'],
+        'search candidate': ['recruitment_services'],
+        'recruiter': ['recruitment_services'],
+        'recruiter login': ['recruitment_services'],
+        'recruiter signin': ['recruitment_services'],
+        'recruiter sign in': ['recruitment_services'],
+        'employer': ['recruitment_services'],
+        'employer portal': ['recruitment_services'],
+        'talent acquisition': ['recruitment_services'],
+        'talent search': ['recruitment_services'],
+        'candidate sourcing': ['recruitment_services'],
+        'job posting': ['recruitment_services'],
+        'job postings': ['recruitment_services'],
+        'post vacancy': ['recruitment_services'],
+        'post position': ['recruitment_services'],
+        'hire talent': ['recruitment_services'],
+        'find talent': ['recruitment_services'],
+        'recruitment tools': ['recruitment_services'],
+        'recruiter tools': ['recruitment_services'],
+        'employer tools': ['recruitment_services'],
+        'candidate database': ['recruitment_services'],
+        'applicant tracking': ['recruitment_services'],
+        'ats system': ['recruitment_services'],
+        'recruitment platform': ['recruitment_services'],
+        'hiring platform': ['recruitment_services'],
+        'employer platform': ['recruitment_services']
     };
 
     // Find matching intents
@@ -155,6 +192,8 @@ function formatResponse(data: any, sectionName: string) {
         response += '<br/><a href="https://www.geniescareerhub.com/career-services" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#162556;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Try AI Career Coach →</a>';
     } else if (sectionName.includes('psychometric_testing')) {
         response += '<br/><a href="https://www.geniescareerhub.com/career-services" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#162556;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Take Psychometric Test →</a>';
+    } else if (sectionName.includes('recruitment_services')) {
+        response += '<br/><a href="https://www.geniescareerhub.com/recruiter/signin" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#162556;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Access Recruiter Portal →</a>';
     }
 
     return response;
@@ -262,6 +301,98 @@ export async function POST(request: Request) {
             `;
 
             return NextResponse.json({ response: internshipResponse });
+        }
+
+        // PRIORITY RECRUITMENT DETECTION - Check this SECOND after internship detection
+        const recruitmentPatterns = [
+            'post job',
+            'post a job',
+            'post jobs',
+            'post vacancy',
+            'post position',
+            'find candidates',
+            'find candidate',
+            'search candidates',
+            'search candidate',
+            'hire talent',
+            'find talent',
+            'recruiter login',
+            'recruiter signin',
+            'recruiter sign in',
+            'employer portal',
+            'talent acquisition',
+            'talent search',
+            'candidate sourcing',
+            'job posting',
+            'job postings',
+            'recruitment tools',
+            'recruiter tools',
+            'employer tools',
+            'candidate database',
+            'applicant tracking',
+            'ats system',
+            'recruitment platform',
+            'hiring platform',
+            'employer platform',
+            'i am a recruiter',
+            "i'm a recruiter",
+            'i am recruiter',
+            "i'm recruiter",
+            'i work as a recruiter',
+            'i work as recruiter',
+            'i am working as a recruiter',
+            'i am working as recruiter',
+            'recruit',
+            'recruitment',
+            'hire',
+            'hiring',
+            'employer'
+        ];
+
+        const isRecruitmentRequest = recruitmentPatterns.some(pattern => query.includes(pattern));
+
+        console.log('=== RECRUITMENT DETECTION DEBUG ===');
+        console.log('Query received:', query);
+        console.log('Recruitment patterns checked:', recruitmentPatterns);
+        console.log('Is recruitment request:', isRecruitmentRequest);
+        console.log('================================');
+
+        if (isRecruitmentRequest) {
+            console.log('🏢 RECRUITMENT DETECTED! Returning recruitment response immediately...');
+
+            const recruitmentResponse = `
+                <b>🏢 RECRUITMENT SERVICES DETECTED!</b><br/><br/>
+                
+                <b>Welcome to Genies Career Hub's Recruitment Platform!</b><br/><br/>
+                
+                <b>🎯 What we offer for recruiters and employers:</b>
+                <ul>
+                    <li><b>Job Posting Platform:</b> Post and manage job vacancies with ease</li>
+                    <li><b>Candidate Database:</b> Access to a vast pool of qualified candidates</li>
+                    <li><b>Advanced Search:</b> Find the perfect candidates with our AI-powered search</li>
+                    <li><b>Applicant Tracking:</b> Manage applications and candidate pipeline</li>
+                    <li><b>ATS Integration:</b> Seamless integration with your existing systems</li>
+                    <li><b>Recruitment Analytics:</b> Track hiring metrics and performance</li>
+                    <li><b>Employer Branding:</b> Showcase your company culture and values</li>
+                    <li><b>Interview Scheduling:</b> Streamlined interview coordination</li>
+                </ul><br/>
+                
+                <b>💼 Perfect for:</b>
+                <ul>
+                    <li>HR professionals and recruiters</li>
+                    <li>Hiring managers and team leads</li>
+                    <li>Startups and growing companies</li>
+                    <li>Enterprise organizations</li>
+                    <li>Recruitment agencies</li>
+                    <li>Talent acquisition specialists</li>
+                </ul><br/>
+                
+                <b>🚀 Ready to streamline your hiring process and find the best talent?</b><br/><br/>
+                
+                <a href="https://www.geniescareerhub.com/recruiter/signin" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#162556;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Access Recruiter Portal →</a>
+            `;
+
+            return NextResponse.json({ response: recruitmentResponse });
         }
 
         // Get relevant sections based on smart matching

@@ -159,14 +159,35 @@ const CareerMate = () => {
         if (
             lower.includes('post a job') ||
             lower.includes('post job') ||
+            lower.includes('post jobs') ||
+            lower.includes('post vacancy') ||
+            lower.includes('post position') ||
             lower.includes('find candidate') ||
             lower.includes('find candidates') ||
+            lower.includes('search candidate') ||
+            lower.includes('search candidates') ||
             lower.includes('hire someone') ||
+            lower.includes('hire talent') ||
+            lower.includes('find talent') ||
             lower.includes('recruit talent') ||
             lower.includes('recruiter login') ||
             lower.includes('recruiter sign in') ||
             lower.includes('recruiter signin') ||
             lower.includes('recruiter tools') ||
+            lower.includes('employer portal') ||
+            lower.includes('talent acquisition') ||
+            lower.includes('talent search') ||
+            lower.includes('candidate sourcing') ||
+            lower.includes('job posting') ||
+            lower.includes('job postings') ||
+            lower.includes('recruitment tools') ||
+            lower.includes('employer tools') ||
+            lower.includes('candidate database') ||
+            lower.includes('applicant tracking') ||
+            lower.includes('ats system') ||
+            lower.includes('recruitment platform') ||
+            lower.includes('hiring platform') ||
+            lower.includes('employer platform') ||
             lower.includes('i am a recruiter') ||
             lower.includes("i'm a recruiter") ||
             lower.includes('i am recruiter') ||
@@ -174,7 +195,12 @@ const CareerMate = () => {
             lower.includes('i work as a recruiter') ||
             lower.includes('i work as recruiter') ||
             lower.includes('i am working as a recruiter') ||
-            lower.includes('i am working as recruiter')
+            lower.includes('i am working as recruiter') ||
+            lower.includes('recruit') ||
+            lower.includes('recruitment') ||
+            lower.includes('hire') ||
+            lower.includes('hiring') ||
+            lower.includes('employer')
         ) {
             return 'recruiter-tools';
         }

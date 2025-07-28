@@ -11,7 +11,8 @@ import HowItWorks from './components/HowItWorks'
 import Testimonials from './components/Testimonials'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
-import Header from './components/Header'  
+import Header from './components/Header'
+import CareerMate from './components/CareerMate'
 
 export default function Home() {
   return (
@@ -31,6 +32,9 @@ export default function Home() {
 
       {/* <CTA /> */}
       <Footer />
+      
+      {/* Chat Widget */}
+      <CareerMate />
     </main>
   )
 } 
