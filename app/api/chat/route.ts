@@ -16,11 +16,11 @@ function getRelevantSections(query: string, data: any) {
         'career guidance': ['core_services.ai_career_coach', 'core_services.career_coaching_services'],
 
         // CV/Resume related
-        'cv': ['core_services.genies_pro_cv_studio'],
-        'resume': ['core_services.genies_pro_cv_studio'],
-        'cv builder': ['core_services.genies_pro_cv_studio.tools.cv_creator'],
-        'cv optimizer': ['core_services.genies_pro_cv_studio.tools.cv_optimizer'],
-        'cv match': ['core_services.genies_pro_cv_studio.tools.cv_match'],
+        'cv': ['core_services.Geniess_pro_cv_studio'],
+        'resume': ['core_services.Geniess_pro_cv_studio'],
+        'cv builder': ['core_services.Geniess_pro_cv_studio.tools.cv_creator'],
+        'cv optimizer': ['core_services.Geniess_pro_cv_studio.tools.cv_optimizer'],
+        'cv match': ['core_services.Geniess_pro_cv_studio.tools.cv_match'],
         'ats': ['key_differentiators.ats_friendly_solutions'],
 
         // Career coaching and advice
@@ -184,7 +184,7 @@ function formatResponse(data: any, sectionName: string) {
         response += '<br/><a href="https://www.geniescareerhub.com/internship" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#172554;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Browse Internships →</a>';
     } else if (sectionName.includes('career_coaching_services')) {
         response += '<br/><a href="https://www.geniescareerhub.com/career-services" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#172554;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Get Career Coaching →</a>';
-    } else if (sectionName.includes('genies_pro_cv_studio')) {
+    } else if (sectionName.includes('Geniess_pro_cv_studio')) {
         response += '<br/><a href="https://www.geniescareerhub.com/cv-studio" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#172554;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Go to CV Studio →</a>';
     } else if (sectionName.includes('job_matching') || sectionName.includes('career_discovery')) {
         response += '<br/><a href="https://www.geniescareerhub.com/jobs" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#172554;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Browse Jobs →</a>';
@@ -211,7 +211,61 @@ export async function POST(request: Request) {
         const fileData = await fs.readFile(filePath, 'utf-8');
         const data = JSON.parse(fileData);
 
-        // Check for specific career advice requests first
+        // Check for CV creation requests first
+        const cvCreationPatterns = [
+            'cv',
+            'i want to make cv',
+            'i want to make a cv',
+            'i want to create cv',
+            'i want to create a cv',
+            'i want to build cv',
+            'i want to build a cv',
+            'make cv',
+            'make a cv',
+            'create cv',
+            'create a cv',
+            'build cv',
+            'build a cv',
+            'want to make cv',
+            'want to create cv',
+            'want to build cv',
+            'need to make cv',
+            'need to create cv',
+            'need to build cv',
+            'help me make cv',
+            'help me create cv',
+            'help me build cv'
+        ];
+
+        const isCVCreationRequest = cvCreationPatterns.some(pattern => query.includes(pattern));
+
+        if (isCVCreationRequest) {
+            // Provide a direct response for CV creation requests
+            const cvCreationResponse = `
+                <b>Perfect! I can help you create a professional CV. 🚀</b><br/><br/>
+                
+                <b>Geniess Career Hub</b> offers powerful CV creation tools to help you build a standout resume:<br/><br/>
+                
+                <b>🎯 What we offer:</b>
+                <ul>
+                    <li><b>Professional CV Builder:</b> Create polished resumes with our easy-to-use builder</li>
+                    <li><b>ATS-Optimized Templates:</b> Templates designed to pass Applicant Tracking Systems</li>
+                    <li><b>AI-Powered Suggestions:</b> Get intelligent recommendations for content and formatting</li>
+                    <li><b>Multiple Formats:</b> Export your CV in various formats (PDF, Word, etc.)</li>
+                    <li><b>Real-time Preview:</b> See how your CV looks as you build it</li>
+                    <li><b>Professional Tips:</b> Get guidance on what to include and how to present yourself</li>
+                </ul><br/>
+                
+                <b>✨ Whether you're a recent graduate or an experienced professional, our tools will help you create a CV that stands out!</b><br/><br/>
+                
+                Ready to create your professional CV? Click below to get started:<br/>
+                <a href="https://www.geniescareerhub.com/cv-studio" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#172554;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Update or Build Your Resume Now →</a>
+            `;
+
+            return NextResponse.json({ response: cvCreationResponse });
+        }
+
+        // Check for specific career advice requests
         const careerAdvicePatterns = [
             'can i get career advice',
             'can i get career guidance',
@@ -232,7 +286,7 @@ export async function POST(request: Request) {
             const careerAdviceResponse = `
                 <b>Absolutely! I'd be happy to help you with career advice. 🚀</b><br/><br/>
                 
-                <b>Genies Career Hub</b> offers comprehensive career services to help you succeed:<br/><br/>
+                <b>Geniess Career Hub</b> offers comprehensive career services to help you succeed:<br/><br/>
                 
                 <b>🎯 What we offer:</b>
                 <ul>
@@ -363,7 +417,7 @@ export async function POST(request: Request) {
             const recruitmentResponse = `
                 <b>🏢 RECRUITMENT SERVICES DETECTED!</b><br/><br/>
                 
-                <b>Welcome to Genies Career Hub's Recruitment Platform!</b><br/><br/>
+                <b>Welcome to Geniess Career Hub's Recruitment Platform!</b><br/><br/>
                 
                 <b>🎯 What we offer for recruiters and employers:</b>
                 <ul>

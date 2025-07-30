@@ -115,7 +115,7 @@ const Navbar = () => {
                         <div className="flex justify-between items-center h-16">
                             <div className="flex items-center">
                                 <div className="flex-shrink-0 flex items-center">
-                                    <img src="/beta-logo.png" alt="GenieCareerHub Logo" className="h-14 w-auto mr-2" />
+                                    <img src="/beta-logo.png" alt="GeniesCareerHub Logo" className="h-14 w-auto mr-2" />
                                     
                                 </div>
                             </div>

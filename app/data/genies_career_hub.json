@@ -1,6 +1,6 @@
 {
   "company": {
-    "name": "Genies Career Hub",
+    "name": "Geniess Career Hub",
     "description": "A comprehensive career development platform offering AI-powered career guidance, professional CV building, job matching, and expert career coaching services.",
     "details": {
       "founded": "2024",
@@ -24,8 +24,8 @@
         "Professional networking guidance"
       ]
     },
-    "genies_pro_cv_studio": {
-      "service_name": "Genies Pro CV Studio",
+    "Geniess_pro_cv_studio": {
+      "service_name": "Geniess Pro CV Studio",
       "description": "Advanced CV building and optimization platform with ATS-friendly templates",
       "tools": {
         "cv_creator": {
@@ -209,7 +209,7 @@
   },
   "service_accessibility": {
     "contact_methods": {
-      "email": "hello@geniescareerhub.com",
+      "email": "hello@Geniesscareerhub.com",
       "phone": "+1 (555) 123-4567",
       "website": "https://www.geniescareerhub.com"
     },

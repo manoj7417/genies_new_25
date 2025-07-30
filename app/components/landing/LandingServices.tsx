@@ -92,7 +92,7 @@ const LandingServices = () => {
 
                       {/* Description */}
                       <p className="text-[15px] text-foreground leading-[1.4]">
-                        We're best known for our AI-powered career platform that millions of professionals visit every month to find jobs, build resumes, and accelerate their careers with personalized guidance and expert coaching.
+                        We're best known for our AI-powered career platform that millions of professionals visit every month to find jobs, build CVs, and accelerate their careers with personalized guidance and expert coaching.
                       </p>
 
                       {/* CTA Button */}
@@ -158,7 +158,7 @@ const LandingServices = () => {
 
                       {/* Description */}
                       <p className="text-[15px] text-foreground leading-[1.4]">
-                        Where professionals analyze and optimize their resumes with AI-powered insights. Get detailed feedback on your CV's strengths, weaknesses, and improvement opportunities.
+                        Where professionals analyze and optimize their Cv with AI-powered insights. Get detailed feedback on your CV's strengths, weaknesses, and improvement opportunities.
                       </p>
 
                       {/* CTA Buttons */}

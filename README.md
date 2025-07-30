@@ -1,6 +1,6 @@
-# Genies Career Hub - Landing Page
+# Geniess Career Hub - Landing Page
 
-A stunning, modern landing page for Genies Career Hub built with Next.js and Tailwind CSS. This landing page is designed to attract users and showcase the platform's career development features.
+A stunning, modern landing page for Geniess Career Hub built with Next.js and Tailwind CSS. This landing page is designed to attract users and showcase the platform's career development features.
 
 ## 🚀 Features
 
@@ -33,7 +33,7 @@ A stunning, modern landing page for Genies Career Hub built with Next.js and Tai
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd genies-career-hub
+   cd Geniess-career-hub
    ```
 
 2. **Install dependencies**
@@ -164,7 +164,7 @@ The landing page is fully responsive with breakpoints:
 ## 📞 Support
 
 For questions or support, please contact:
-- Email: hello@geniescareerhub.com
+- Email: hello@Geniesscareerhub.com
 - Phone: +1 (555) 123-4567
 
 ## 📄 License
@@ -173,4 +173,4 @@ This project is licensed under the MIT License.
 
 ---
 
-**Built with ❤️ for Genies Career Hub** 
+**Built with ❤️ for Geniess Career Hub** 

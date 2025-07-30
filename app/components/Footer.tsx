@@ -33,8 +33,8 @@ const Footer = () => {
                         <div className="grid md:grid-cols-4 gap-8">
                             <div className="md:col-span-2">
                                 <div className="flex items-center mb-4">
-                                    <img src="/beta-logo.png" alt="GenieCareerHub Logo" className="h-14 w-auto mr-2" />
-                                    {/* <span className="text-2xl font-bold text-gray-900">GenieCareerHub</span> */}
+                                    <img src="/beta-logo.png" alt="GeniesCareerHub Logo" className="h-14 w-auto mr-2" />
+                                    {/* <span className="text-2xl font-bold text-gray-900">GeniesCareerHub</span> */}
                                 </div>
                                 <p className="text-gray-600 leading-relaxed mb-6 lg:w-[70%] w-full">
                                     Transforming careers and connecting talent with opportunity. Your success is our mission.
@@ -56,7 +56,7 @@ const Footer = () => {
                                 <ul className="space-y-2 text-gray-600">
                                     <li><a href="https://www.geniescareerhub.com/jobs" className="hover:text-blue-950 transition-colors duration-200">Find Jobs</a></li>
                                     <li><a href="https://www.geniescareerhub.com/career-services" className="hover:text-blue-950 transition-colors duration-200">Career Coaching</a></li>
-                                    <li><a href="https://www.geniescareerhub.com/resume" className="hover:text-blue-950 transition-colors duration-200">Resume Builder</a></li>
+                                    <li><a href="https://www.geniescareerhub.com/resume" className="hover:text-blue-950 transition-colors duration-200">CV Builder</a></li>
                                    
                                 </ul>
                             </div>
@@ -72,7 +72,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500">
-                            <p>&copy; 2025 GeniesCareerHub. All rights reserved.</p>
+                            <p>&copy; 2025 GeniessCareerHub. All rights reserved.</p>
                         </div>
                     </div>
                 </footer>

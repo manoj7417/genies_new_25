@@ -21,8 +21,9 @@ const LandingCVScan = () => {
           </h2>
           <div className="w-32 h-0.5 bg-gray-300 mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Upload your CV or start from scratch. Genie AI reviews and scores it instantly—no experience needed!
+            Upload your CV or start from scratch. Genies AI reviews and scores it instantly
           </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">No experience needed!</p>
         </motion.div>
 
                  {/* Main Content - Two Columns */}
@@ -51,7 +52,7 @@ const LandingCVScan = () => {
                      <div className="w-6 h-6 bg-blue-950 rounded-full flex items-center justify-center mr-3 mt-0.5">
                        <span className="text-white text-xs font-bold">2</span>
                      </div>
-                     <span className="text-gray-700">Genie AI reviews and scores it instantly</span>
+                     <span className="text-gray-700">Genies AI reviews and scores it instantly</span>
                    </div>
                    
                    <div className="flex items-start">
@@ -95,7 +96,7 @@ const LandingCVScan = () => {
                  <h3 className="text-lg font-medium text-gray-500 mb-4">No experience? No problem!</h3>
                  
                  <p className="text-gray-700 mb-6">
-                   Genie helps you highlight your strengths, skills, and potential—even if you're just starting out.
+                   Genies helps you highlight your strengths, skills, and potential,even if you're just starting out.
                  </p>
 
                  {/* CV Scan Preview with Image */}

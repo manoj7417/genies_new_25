@@ -26,7 +26,7 @@ const LandingHeader = () => {
               <img
                 className="h-14 w-20"
                 src="/beta-logo.png"
-                alt="Genies Career Hub"
+                alt="Geniess Career Hub"
               />
             </div>
             
@@ -49,10 +49,14 @@ const LandingHeader = () => {
 
           {/* CTA Buttons - Right */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" onClick={() => {
+              window.location.href = 'https://www.geniescareerhub.com/login';
+            }}>
               Sign In
             </Button>
-            <Button size="sm">
+            <Button size="sm" onClick={() => {
+              window.location.href = 'https://www.geniescareerhub.com/cv-studio';
+            }}>
               Get Started
             </Button>
           </div>
@@ -84,10 +88,14 @@ const LandingHeader = () => {
                 </a>
               ))}
               <div className="pt-4 space-y-2">
-                <Button variant="ghost" className="w-full justify-start" size="sm">
+                <Button variant="ghost" className="w-full justify-start" size="sm" onClick={() => {
+                  window.location.href = 'https://www.geniescareerhub.com/login';
+                }}>
                   Sign In
                 </Button>
-                <Button className="w-full" size="sm">
+                <Button className="w-full" size="sm" onClick={() => {
+                  window.location.href = 'https://www.geniescareerhub.com/cv-studio';
+                }}>
                   Get Started
                 </Button>
               </div>

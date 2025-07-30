@@ -16,7 +16,7 @@ export default function Testimonials() {
       name: "Sarah Johnson",
       role: "Software Engineer",
       company: "TechCorp",
-      content: "Genies Career Hub helped me land my dream job at a top tech company. The mentorship program was invaluable in preparing me for interviews.",
+      content: "Geniess Career Hub helped me land my dream job at a top tech company. The mentorship program was invaluable in preparing me for interviews.",
       rating: 5,
       avatar: "SJ"
     },

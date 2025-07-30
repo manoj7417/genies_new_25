@@ -78,7 +78,7 @@ export default function FooterCTA() {
             <h3 className="text-xl font-bold mb-4">Book a Demo</h3>
             <p className="text-blue-200 mb-6">See our platform in action with a personalized demo from our experts.</p>
             <Link 
-              href="mailto:demo@geniescareerhub.com?subject=Demo Request"
+              href="mailto:demo@Geniesscareerhub.com?subject=Demo Request"
               className="inline-flex items-center bg-blue-950 hover:bg-blue-900 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
             >
               Book Demo
@@ -94,7 +94,7 @@ export default function FooterCTA() {
             <h3 className="text-xl font-bold mb-4">Get in Touch</h3>
             <p className="text-blue-200 mb-6">Have questions? Our support team is here to help you succeed.</p>
             <Link 
-              href="mailto:support@geniescareerhub.com"
+              href="mailto:support@Geniesscareerhub.com"
               className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
             >
               Contact Us
@@ -139,7 +139,7 @@ export default function FooterCTA() {
                 Start Building Now
               </Link>
               <Link 
-                href="mailto:support@geniescareerhub.com"
+                href="mailto:support@Geniesscareerhub.com"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-4 px-8 rounded-lg transition-colors duration-300 text-lg"
               >
                 Get Support

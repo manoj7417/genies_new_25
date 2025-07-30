@@ -16,16 +16,16 @@ const LandingTestimonials = () => {
       name: 'Sarah Johnson',
       role: 'Software Engineer',
       company: 'Google',
-      avatar: '/genies.jpg',
+      avatar: '/Geniess.jpg',
       rating: 5,
-      content: 'Genies Career Hub transformed my job search. The AI career coach helped me identify the right opportunities, and the CV builder created a resume that got me interviews at top tech companies.',
+      content: 'Geniess Career Hub transformed my job search. The AI career coach helped me identify the right opportunities, and the CV builder created a CV that got me interviews at top tech companies.',
       highlight: 'Got hired at Google'
     },
     {
       name: 'Michael Chen',
       role: 'Marketing Manager',
       company: 'Microsoft',
-      avatar: '/genies.jpg',
+      avatar: '/Geniess.jpg',
       rating: 5,
       content: 'The personalized career guidance was incredible. The platform helped me transition from marketing to product management, and I landed my dream job at Microsoft.',
       highlight: 'Career transition success'
@@ -34,16 +34,16 @@ const LandingTestimonials = () => {
       name: 'Emily Rodriguez',
       role: 'Data Scientist',
       company: 'Amazon',
-      avatar: '/genies.jpg',
+      avatar: '/Geniess.jpg',
       rating: 5,
-      content: 'The ATS-optimized resume builder is a game-changer. My resume now passes through every applicant tracking system, and I received 3x more interview calls.',
+      content: 'The ATS-optimized CV builder is a game-changer. My CV now passes through every applicant tracking system, and I received 3x more interview calls.',
       highlight: '3x more interviews'
     },
     {
       name: 'David Thompson',
       role: 'UX Designer',
       company: 'Apple',
-      avatar: '/genies.jpg',
+      avatar: '/Geniess.jpg',
       rating: 5,
       content: 'The job matching algorithm found positions I never would have discovered on my own. The platform truly understands my career goals and skills.',
       highlight: 'Perfect job matches'
@@ -52,7 +52,7 @@ const LandingTestimonials = () => {
       name: 'Lisa Wang',
       role: 'Product Manager',
       company: 'Netflix',
-      avatar: '/genies.jpg',
+      avatar: '/Geniess.jpg',
       rating: 5,
       content: 'The career coaching sessions were invaluable. My coach helped me negotiate a 40% salary increase and provided strategies for long-term career growth.',
       highlight: '40% salary increase'
@@ -61,9 +61,9 @@ const LandingTestimonials = () => {
       name: 'James Wilson',
       role: 'DevOps Engineer',
       company: 'Meta',
-      avatar: '/genies.jpg',
+      avatar: '/Geniess.jpg',
       rating: 5,
-      content: 'From resume optimization to interview prep, Genies Career Hub covered everything. The AI insights were spot-on and helped me land a role at Meta.',
+      content: 'From CV optimization to interview prep, Geniess Career Hub covered everything. The AI insights were spot-on and helped me land a role at Meta.',
       highlight: 'Hired at Meta'
     },
     // Duplicated testimonials for continuous flow
@@ -71,16 +71,16 @@ const LandingTestimonials = () => {
       name: 'Alex Rodriguez',
       role: 'Frontend Developer',
       company: 'Spotify',
-      avatar: '/genies.jpg',
+      avatar: '/Geniess.jpg',
       rating: 5,
-      content: 'The CV builder is incredibly intuitive. I created a professional resume in minutes that perfectly highlighted my skills and experience.',
-      highlight: 'Quick resume creation'
+      content: 'The CV builder is incredibly intuitive. I created a professional CV in minutes that perfectly highlighted my skills and experience.',
+      highlight: 'Quick CV creation'
     },
     {
       name: 'Maria Garcia',
       role: 'Backend Engineer',
       company: 'Uber',
-      avatar: '/genies.jpg',
+      avatar: '/Geniess.jpg',
       rating: 5,
       content: 'The AI career coach provided personalized advice that helped me navigate a complex job market and land my dream role.',
       highlight: 'Personalized guidance'
@@ -89,7 +89,7 @@ const LandingTestimonials = () => {
       name: 'John Smith',
       role: 'Data Analyst',
       company: 'LinkedIn',
-      avatar: '/genies.jpg',
+      avatar: '/Geniess.jpg',
       rating: 5,
       content: 'The job matching feature found opportunities I never would have considered. It opened doors to amazing career possibilities.',
       highlight: 'Discovering new opportunities'
@@ -98,7 +98,7 @@ const LandingTestimonials = () => {
       name: 'Emma Davis',
       role: 'Product Designer',
       company: 'Airbnb',
-      avatar: '/genies.jpg',
+      avatar: '/Geniess.jpg',
       rating: 5,
       content: 'The interview preparation tools were game-changing. I felt confident and prepared for every interview question.',
       highlight: 'Interview success'
@@ -107,7 +107,7 @@ const LandingTestimonials = () => {
       name: 'Carlos Mendez',
       role: 'Full Stack Developer',
       company: 'Twitter',
-      avatar: '/genies.jpg',
+      avatar: '/Geniess.jpg',
       rating: 5,
       content: 'The platform helped me transition from junior to senior developer. The career path guidance was invaluable.',
       highlight: 'Career advancement'
@@ -116,7 +116,7 @@ const LandingTestimonials = () => {
       name: 'Sophie Turner',
       role: 'UX Researcher',
       company: 'Figma',
-      avatar: '/genies.jpg',
+      avatar: '/Geniess.jpg',
       rating: 5,
       content: 'The salary negotiation tips from the career coach helped me secure a 30% pay increase in my new role.',
       highlight: 'Salary negotiation success'

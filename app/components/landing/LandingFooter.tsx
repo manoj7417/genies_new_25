@@ -58,9 +58,9 @@ const LandingFooter = () => {
                 <img
                   className="h-8 w-auto"
                   src="/beta-logo.png"
-                  alt="Genies Career Hub"
+                  alt="Geniess Career Hub"
                 />
-                <span className="ml-2 text-[19px] font-[600]">Genies Career Hub</span>
+                <span className="ml-2 text-[19px] font-[600]">Geniess Career Hub</span>
               </div>
               
               <p className="text-[#bcbbbb] mb-6 leading-[1.4] text-[13px]">
@@ -71,7 +71,7 @@ const LandingFooter = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-[#f48024]" />
-                  <span className="text-[#bcbbbb] text-[13px]">hello@geniescareerhub.com</span>
+                  <span className="text-[#bcbbbb] text-[13px]">hello@Geniesscareerhub.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-[#f48024]" />
@@ -184,7 +184,7 @@ const LandingFooter = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-[#bcbbbb] text-[12px] mb-4 md:mb-0">
-              © 2024 Genies Career Hub. All rights reserved.
+              © 2024 Geniess Career Hub. All rights reserved.
             </div>
 
             {/* Social Links */}

@@ -149,7 +149,7 @@ export default function TrustAuthority() {
           <div className="text-center">
             <Quote className="w-12 h-12 mx-auto mb-6 opacity-80" />
             <blockquote className="text-xl font-medium mb-4 max-w-3xl mx-auto">
-              "Genies Career Hub represents the future of career development. Their AI-powered approach has transformed how professionals approach job searching and career growth."
+              "Geniess Career Hub represents the future of career development. Their AI-powered approach has transformed how professionals approach job searching and career growth."
             </blockquote>
             <div className="flex items-center justify-center">
               <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">

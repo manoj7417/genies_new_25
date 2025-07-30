@@ -20,7 +20,7 @@ export default function PricingPreview() {
             Simple, Transparent Pricing
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Start building your ATS-proof resume for free. Upgrade when you're ready to unlock premium features.
+            Start building your ATS-proof CV for free. Upgrade when you're ready to unlock premium features.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export default function PricingPreview() {
               <div className="space-y-4 mb-8 flex-grow">
                 <div className="flex items-center">
                   <Check className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="text-foreground">1 ATS-Optimised resume</span>
+                  <span className="text-foreground">1 ATS-Optimised CV</span>
                 </div>
                 <div className="flex items-center">
                   <Check className="w-5 h-5 text-green-500 mr-3" />
@@ -99,7 +99,7 @@ export default function PricingPreview() {
                 </div>
                 <div className="flex items-center">
                   <Check className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Unlimited resumes</span>
+                  <span>Unlimited CVs</span>
                 </div>
                 <div className="flex items-center">
                   <Check className="w-5 h-5 text-green-400 mr-3" />

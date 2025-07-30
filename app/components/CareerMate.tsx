@@ -40,9 +40,9 @@ const CareerMate = () => {
     useEffect(() => {
         if (isOpen && messages.length === 0) {
             setTimeout(() => {
-                addBotMessage("👋 Hello! I'm Genies, your career assistant.");
+                addBotMessage("👋 Hello! I'm Geniess, your career assistant.");
                 setTimeout(() => {
-                    addBotMessage("Are you looking for help as a **Job Seeker** or a **Recruiter**?", true);
+                    addBotMessage("Are you looking for help as a Job Seeker or a Recruiter?", true);
                 }, 1000);
             }, 500);
         }
@@ -424,28 +424,28 @@ const CareerMate = () => {
         }
         if (special === 'resume-update') {
             addBotMessageHTML(
-                `You can update or build your resume instantly using our <b>Genies Career Hub Resume Builder</b>.<br />
+                `You can update or build your resume instantly using our <b>Geniess Career Hub Resume Builder</b>.<br />
                 <a href="https://www.geniescareerhub.com/resume" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:8px 16px;background:#172554;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;">Update or Build Your Resume Now</a><br /><br />Is there anything else I can help you with?`
             );
             return;
         }
         if (special === 'ats') {
             addBotMessageHTML(
-                `You can check your resume's ATS score and get a detailed analysis using our <b>Genies Career Hub Resume Analyzer</b>.<br />
+                `You can check your resume's ATS score and get a detailed analysis using our <b>Geniess Career Hub Resume Analyzer</b>.<br />
                 <a href="https://www.geniescareerhub.com/resume-analyzer" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:8px 16px;background:#172554;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;">Analyze My Resume</a><br /><br />Is there anything else I can help you with?`
             );
             return;
         }
         if (special === 'job-search') {
             addBotMessageHTML(
-                `You can browse and apply for jobs on <b>Genies Career Hub</b>.<br />
+                `You can browse and apply for jobs on <b>Geniess Career Hub</b>.<br />
                 <a href="https://www.geniescareerhub.com/jobs" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:8px 16px;background:#172554;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;">Browse Jobs Now</a><br /><br />Let me know if you need help with your job search or applications!`
             );
             return;
         }
         if (special === 'recruiter-tools') {
             addBotMessageHTML(
-                `You can access recruiter tools, post jobs, and find candidates on <b>Genies Career Hub</b>.<br />
+                `You can access recruiter tools, post jobs, and find candidates on <b>Geniess Career Hub</b>.<br />
                 <a href="https://www.geniescareerhub.com/recruiter/signin" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:8px 16px;background:#172554;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;">Access Recruiter Tools</a><br /><br />Let me know if you need help with your recruitment process!`
             );
             return;
@@ -468,22 +468,22 @@ const CareerMate = () => {
             );
         } else if (detectSpecialIntent(aiResponse) === 'resume-update') {
             addBotMessageHTML(
-                `You can update or build your resume instantly using our <b>Genies Career Hub Resume Builder</b>.<br />
+                `You can update or build your resume instantly using our <b>Geniess Career Hub Resume Builder</b>.<br />
                 <a href="https://www.geniescareerhub.com/resume" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:8px 16px;background:#172554;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;">Update or Build Your Resume Now</a><br /><br />Is there anything else I can help you with?`
             );
         } else if (detectSpecialIntent(aiResponse) === 'ats') {
             addBotMessageHTML(
-                `You can check your resume's ATS score and get a detailed analysis using our <b>Genies Career Hub Resume Analyzer</b>.<br />
+                `You can check your resume's ATS score and get a detailed analysis using our <b>Geniess Career Hub Resume Analyzer</b>.<br />
                 <a href="https://www.geniescareerhub.com/resume-analyzer" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:8px 16px;background:#172554;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;">Analyze My Resume</a><br /><br />Is there anything else I can help you with?`
             );
         } else if (detectSpecialIntent(aiResponse) === 'job-search') {
             addBotMessageHTML(
-                `You can browse and apply for jobs on <b>Genies Career Hub</b>.<br />
+                `You can browse and apply for jobs on <b>Geniess Career Hub</b>.<br />
                 <a href="https://www.geniescareerhub.com/jobs" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:8px 16px;background:#172554;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;">Browse Jobs Now</a><br /><br />Let me know if you need help with your job search or applications!`
             );
         } else if (detectSpecialIntent(aiResponse) === 'recruiter-tools') {
             addBotMessageHTML(
-                `You can access recruiter tools, post jobs, and find candidates on <b>Genies Career Hub</b>.<br />
+                `You can access recruiter tools, post jobs, and find candidates on <b>Geniess Career Hub</b>.<br />
                 <a href="https://www.geniescareerhub.com/recruiter/signin" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:8px 16px;background:#172554;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;">Access Recruiter Tools</a><br /><br />Let me know if you need help with your recruitment process!`
             );
         } else if (detectSpecialIntent(aiResponse) === 'internship') {
@@ -557,28 +557,28 @@ const CareerMate = () => {
                 }
                 if (specialIntent === 'resume-update') {
                     addBotMessageHTML(
-                        `You can update or build your resume instantly using our <b>Genies Career Hub Resume Builder</b>.<br />
+                        `You can update or build your resume instantly using our <b>Geniess Career Hub Resume Builder</b>.<br />
                         <a href="https://www.geniescareerhub.com/cv-studio" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:8px 16px;background:#172554;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;">Update or Build Your Resume Now</a><br /><br />Is there anything else I can help you with?`
                     );
                     return;
                 }
                 if (specialIntent === 'ats') {
                     addBotMessageHTML(
-                        `You can check your resume's ATS score and get a detailed analysis using our <b>Genies Career Hub Resume Analyzer</b>.<br />
+                        `You can check your resume's ATS score and get a detailed analysis using our <b>Geniess Career Hub Resume Analyzer</b>.<br />
                         <a href="https://www.geniescareerhub.com/resume-analyzer" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:8px 16px;background:#172554;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;">Analyze My Resume</a><br /><br />Is there anything else I can help you with?`
                     );
                     return;
                 }
                 if (specialIntent === 'job-search') {
                     addBotMessageHTML(
-                        `You can browse and apply for jobs on <b>Genies Career Hub</b>.<br />
+                        `You can browse and apply for jobs on <b>Geniess Career Hub</b>.<br />
                         <a href="https://www.geniescareerhub.com/jobs" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:8px 16px;background:#172554;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;">Browse Jobs Now</a><br /><br />Let me know if you need help with your job search or applications!`
                     );
                     return;
                 }
                 if (specialIntent === 'recruiter-tools') {
                     addBotMessageHTML(
-                        `You can access recruiter tools, post jobs, and find candidates on <b>Genies Career Hub</b>.<br />
+                        `You can access recruiter tools, post jobs, and find candidates on <b>Geniess Career Hub</b>.<br />
                         <a href="https://www.geniescareerhub.com/recruiter/signin" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:8px 16px;background:#172554;color:#fff;border-radius:8px;font-weight:600;text-decoration:none;">Access Recruiter Tools</a><br /><br />Let me know if you need help with your recruitment process!`
                     );
                     return;
@@ -640,10 +640,10 @@ const CareerMate = () => {
                         <div className="bg-blue-950 text-white p-4 flex items-center justify-between">
                             <div className="flex items-center space-x-3">
                                 <div className="w-10 h-10 bg-blue-950 rounded-full flex items-center justify-center overflow-hidden">
-                                    <img src="/genies.jpg" alt="Genie Icon" className="h-8 w-8 rounded-full" />
+                                    <img src="/genies.jpg" alt="Genies Icon" className="h-8 w-8 rounded-full" />
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold">Genies</h3>
+                                    <h3 className="font-semibold">Geniess</h3>
                                     <p className="text-sm text-blue-200">Your Career Assistant</p>
                                 </div>
                             </div>
