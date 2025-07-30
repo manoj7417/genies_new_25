@@ -71,8 +71,8 @@ const LandingServices = () => {
           >
             {/* CV Builder Slide */}
             <SwiperSlide>
-              <Card className="border-0 shadow-lg bg-muted/30">
-                <CardContent className="p-10">
+              <Card className="border-0 shadow-lg bg-muted/30 min-h-[450px]">
+                <CardContent className="p-12">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -137,8 +137,8 @@ const LandingServices = () => {
 
             {/* CV Analyser Slide */}
             <SwiperSlide>
-              <Card className="border-0 shadow-lg bg-blue-50/50">
-                <CardContent className="p-10">
+              <Card className="border-0 shadow-lg bg-blue-50/50 min-h-[450px]">
+                <CardContent className="p-12">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -205,8 +205,8 @@ const LandingServices = () => {
 
             {/* CV Match Slide */}
             <SwiperSlide>
-              <Card className="border-0 shadow-lg bg-orange-50/50">
-                <CardContent className="p-10">
+              <Card className="border-0 shadow-lg bg-orange-50/50 min-h-[450px]">
+                <CardContent className="p-12">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -273,8 +273,8 @@ const LandingServices = () => {
 
             {/* AI-Human Coaches Slide */}
             <SwiperSlide>
-              <Card className="border-0 shadow-lg bg-purple-50/50">
-                <CardContent className="p-10">
+              <Card className="border-0 shadow-lg bg-purple-50/50 min-h-[450px]">
+                <CardContent className="p-12">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -341,8 +341,8 @@ const LandingServices = () => {
 
             {/* Jobs Slide */}
             <SwiperSlide>
-              <Card className="border-0 shadow-lg bg-green-50/50">
-                <CardContent className="p-10">
+              <Card className="border-0 shadow-lg bg-green-50/50 min-h-[450px]">
+                <CardContent className="p-12">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -463,8 +463,8 @@ const LandingServices = () => {
           >
             {/* Recruitment Slide */}
             <SwiperSlide>
-              <Card className="border-0 shadow-lg bg-red-50/50">
-                <CardContent className="p-10">
+              <Card className="border-0 shadow-lg bg-red-50/50 min-h-[450px]">
+                <CardContent className="p-12">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -529,8 +529,8 @@ const LandingServices = () => {
 
             {/* Coaching For Employees Slide */}
             <SwiperSlide>
-              <Card className="border-0 shadow-lg bg-teal-50/50">
-                <CardContent className="p-10">
+              <Card className="border-0 shadow-lg bg-teal-50/50 min-h-[450px]">
+                <CardContent className="p-12">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div

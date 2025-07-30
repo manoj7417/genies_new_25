@@ -1,6 +1,7 @@
 import LandingHero from '../components/landing/LandingHero'
 import LandingFeatures from '../components/landing/LandingFeatures'
 import LandingServices from '../components/landing/LandingServices'
+import LandingCVScan from '../components/landing/LandingCVScan'
 import LandingTestimonials from '../components/landing/LandingTestimonials'
 import LandingCTA from '../components/landing/LandingCTA'
 import LandingHeader from '../components/landing/LandingHeader'
@@ -14,6 +15,7 @@ export default function LandingPage() {
       <LandingHero />
       {/* <LandingFeatures /> */}
       <LandingServices />
+      <LandingCVScan />
       <LandingTestimonials />
       {/* <LandingCTA /> */}
       <LandingFooter />

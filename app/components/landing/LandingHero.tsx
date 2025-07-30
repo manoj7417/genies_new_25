@@ -171,7 +171,7 @@ const LandingHero = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-[27px] md:text-4xl lg:text-6xl font-[700] text-foreground leading-[1.15] mb-6"
             >
-              Turn Rejections into Interviews.
+              Turn Rejections into <span className='text-blue-800'>Interviews.</span>
             </motion.h1>
 
             {/* Supporting Text */}
@@ -207,7 +207,7 @@ const LandingHero = () => {
                 size="lg"
                 className="px-8 py-3 text-[13px] font-[600] group text-foreground underline"
                 onClick={() => {
-                  // Add video functionality here
+                  window.location.href = 'https://www.geniescareerhub.com/career-coaching';
                 }}
               >
                 <Play className="mr-2 w-4 h-4" />
