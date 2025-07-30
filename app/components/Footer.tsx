@@ -40,13 +40,13 @@ const Footer = () => {
                                     Transforming careers and connecting talent with opportunity. Your success is our mission.
                                 </p>
                                 <div className="flex space-x-4">
-                                    <a href="https://www.linkedin.com/company/genies-career-hub/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-950 rounded-lg flex items-center justify-center hover:bg-blue-900 cursor-pointer transition-colors duration-200">
+                                    <a href="https://www.linkedin.com/company/genies-career-hub/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-950 rounded-lg flex items-center justify-center hover:bg-blue-950 cursor-pointer transition-colors duration-200">
                                         <Linkedin className="h-5 w-5 text-white" />
                                     </a>
-                                    <a href="https://www.facebook.com/profile.php?id=61560696226983" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-950 rounded-lg flex items-center justify-center hover:bg-blue-900 cursor-pointer transition-colors duration-200">
+                                    <a href="https://www.facebook.com/profile.php?id=61560696226983" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-950 rounded-lg flex items-center justify-center hover:bg-blue-950 cursor-pointer transition-colors duration-200">
                                         <Facebook className="h-5 w-5 text-white" />
                                     </a>
-                                    <a href="https://www.instagram.com/genies_career_hub/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-950 rounded-lg flex items-center justify-center hover:bg-blue-900 cursor-pointer transition-colors duration-200">
+                                    <a href="https://www.instagram.com/genies_career_hub/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-950 rounded-lg flex items-center justify-center hover:bg-blue-950 cursor-pointer transition-colors duration-200">
                                         <Instagram className="h-5 w-5 text-white" />
                                     </a>
                                 </div>

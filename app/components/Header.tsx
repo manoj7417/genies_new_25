@@ -241,7 +241,7 @@ const Navbar = () => {
                                 }`}>
                                     Sign In
                                 </Link>
-                                <Link href="https://www.geniescareerhub.com/" className="bg-blue-950 hover:bg-blue-900 text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
+                                <Link href="https://www.geniescareerhub.com/" className="bg-[#0077cc] hover:bg-[#0077cc] text-white px-6 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105">
                                     Get Started
                                 </Link>
                             </div>
@@ -366,7 +366,7 @@ const Navbar = () => {
                                     <Link 
                                         href="https://www.geniescareerhub.com/" 
                                         onClick={() => setIsMenuOpen(false)}
-                                        className="block w-full mt-2 bg-blue-950 hover:bg-blue-900 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                                        className="block w-full mt-2 bg-[#0077cc] hover:bg-[#0077cc] text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200"
                                     >
                                         Get Started
                                     </Link>

@@ -75,7 +75,7 @@ export default function HowItWorks() {
 
         {/* CTA Section */}
         <div className="text-center mt-12">
-          <Link href="https://www.geniescareerhub.com/cv-studio" className="bg-blue-950 hover:bg-blue-900 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg">
+          <Link href="https://www.geniescareerhub.com/cv-studio" className="bg-[#0077cc] hover:bg-[#0077cc] text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg">
             Start Building Your CV
           </Link>
         </div>

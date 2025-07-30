@@ -58,7 +58,7 @@ export default function CoreFeatures() {
 
             <Link 
               href="https://www.geniescareerhub.com/resume"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center"
+              className="w-full bg-blue-950 hover:bg-blue-900 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center"
             >
               Start Building
               <ArrowRight className="w-4 h-4 ml-2" />

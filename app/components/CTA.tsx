@@ -36,7 +36,7 @@ export default function CTA() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="https://www.geniescareerhub.com" className="bg-blue-950 hover:bg-blue-900 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 flex items-center">
+            <Link href="https://www.geniescareerhub.com" className="bg-[#0077cc] hover:bg-[#0077cc] text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:shadow-lg hover:scale-105 flex items-center">
               Start Your Journey
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>

@@ -24,7 +24,7 @@ export default function Toast({ message, isVisible, onClose }: ToastProps) {
 
   return (
     <div className="fixed top-20 right-4 z-50 animate-fade-in">
-      <div className="bg-blue-950 text-white px-6 py-4 rounded-lg shadow-lg flex items-center space-x-3">
+      <div className="bg-[#0077cc] text-white px-6 py-4 rounded-lg shadow-lg flex items-center space-x-3">
         <span className="text-sm font-medium">{message}</span>
         <button
           onClick={onClose}

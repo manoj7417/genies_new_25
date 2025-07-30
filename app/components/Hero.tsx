@@ -59,7 +59,7 @@ export default function Hero() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 mb-6 justify-center">
-                <Link href="https://www.geniescareerhub.com/cv-studio" className="bg-blue-950 hover:bg-blue-900 text-white font-semibold py-3 px-6 rounded-lg text-base transition-all duration-300 hover:shadow-lg hover:scale-105 flex items-center justify-center">
+                <Link href="https://www.geniescareerhub.com/cv-studio" className="bg-[#0077cc] hover:bg-[#0077cc] text-white font-semibold py-3 px-6 rounded-lg text-base transition-all duration-300 hover:shadow-lg hover:scale-105 flex items-center justify-center">
                   Build ATS-Proof CV Now
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>

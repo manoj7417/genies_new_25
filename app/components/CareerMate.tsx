@@ -616,7 +616,7 @@ const CareerMate = () => {
             {/* Floating Chat Button */}
             <motion.button
                 onClick={() => setIsOpen(true)}
-                className={`animate-bounce fixed bottom-6 right-6 z-50 bg-blue-950 hover:bg-blue-900 text-white p-4 rounded-full shadow-lg transition-all duration-300 ${isOpen ? 'hidden' : 'flex'} items-center justify-center`}
+                className={`animate-bounce fixed bottom-6 right-6 z-50 bg-blue-950 hover:bg-blue-950 text-white p-4 rounded-full shadow-lg transition-all duration-300 ${isOpen ? 'hidden' : 'flex'} items-center justify-center`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -639,7 +639,7 @@ const CareerMate = () => {
                         {/* Header */}
                         <div className="bg-blue-950 text-white p-4 flex items-center justify-between">
                             <div className="flex items-center space-x-3">
-                                <div className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center overflow-hidden">
+                                <div className="w-10 h-10 bg-blue-950 rounded-full flex items-center justify-center overflow-hidden">
                                     <img src="/genies.jpg" alt="Genie Icon" className="h-8 w-8 rounded-full" />
                                 </div>
                                 <div>
@@ -674,7 +674,7 @@ const CareerMate = () => {
                                 >
                                     <div className={`max-w-[80%] rounded-2xl p-3 ${
                                         message.sender === 'user'
-                                            ? 'bg-blue-950 text-white'
+                                            ? 'bg-[#172554] text-white'
                                             : 'bg-gray-100 text-gray-900'
                                     }`}>
                                         {message.isHTML ? (
@@ -717,7 +717,7 @@ const CareerMate = () => {
                                                     <motion.button
                                                         key={index}
                                                         onClick={() => handleSuggestedQuestion(question)}
-                                                        className="w-full bg-blue-50 hover:bg-blue-100 text-blue-800 py-2 px-3 rounded-lg transition-colors text-sm text-left border border-blue-200"
+                                                        className="w-full bg-blue-50 hover:bg-blue-100 text-blue-950 py-2 px-3 rounded-lg transition-colors text-sm text-left border border-blue-200"
                                                         whileHover={{ scale: 1.02 }}
                                                         whileTap={{ scale: 0.98 }}
                                                     >

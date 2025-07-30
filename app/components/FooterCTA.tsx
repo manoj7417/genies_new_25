@@ -79,7 +79,7 @@ export default function FooterCTA() {
             <p className="text-blue-200 mb-6">See our platform in action with a personalized demo from our experts.</p>
             <Link 
               href="mailto:demo@geniescareerhub.com?subject=Demo Request"
-              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
+              className="inline-flex items-center bg-blue-950 hover:bg-blue-900 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
             >
               Book Demo
               <ArrowRight className="w-4 h-4 ml-2" />

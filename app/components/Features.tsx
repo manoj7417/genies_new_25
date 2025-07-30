@@ -91,7 +91,7 @@ export default function Features() {
               Join thousands of professionals who have transformed their careers with our AI-powered CV builder.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://www.geniescareerhub.com/cv-studio" className="bg-blue-950 hover:bg-blue-900 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:shadow-lg">
+              <Link href="https://www.geniescareerhub.com/cv-studio" className="bg-[#0077cc] hover:bg-[#0077cc] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:shadow-lg">
                 Get Started Free
               </Link>
               {/* <button className="bg-white hover:bg-gray-50 text-blue-950 font-semibold py-4 px-8 rounded-lg text-lg border-2 border-blue-950 transition-all duration-300 hover:shadow-lg">
