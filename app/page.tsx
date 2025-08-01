@@ -21,6 +21,7 @@ import LandingHeader from './components/landing/LandingHeader'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import LandingCVScan from './components/landing/LandingCVScan'
+import LandingCoaches from './components/landing/LandingCoaches'
 
 export default function Home() {
   return (
@@ -49,6 +50,11 @@ export default function Home() {
       {/* Enhanced Trust and Problem Section */}
       <section className="py-16 bg-muted/30">
         <TrustAndProblem />
+      </section>
+
+      {/* Enhanced Coaches Section */}
+      <section className="py-16 bg-background">
+        <LandingCoaches />
       </section>
 
       {/* Enhanced Pricing Preview with Card Components */}

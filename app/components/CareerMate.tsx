@@ -643,7 +643,7 @@ const CareerMate = () => {
                                     <img src="/genies.jpg" alt="Genies Icon" className="h-8 w-8 rounded-full" />
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold">Geniess</h3>
+                                    <h3 className="font-semibold">Genies</h3>
                                     <p className="text-sm text-blue-200">Your Career Assistant</p>
                                 </div>
                             </div>
