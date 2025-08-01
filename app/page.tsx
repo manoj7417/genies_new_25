@@ -37,35 +37,35 @@ export default function Home() {
       </section>
 
       {/* Enhanced Services Section */}
-      <section className="py-16 bg-background">
+      <section className="py-12 sm:py-16 bg-background">
         <LandingServices/>
       </section>
 
 
       {/* CV Scan Section */}
-      <section className="py-16 bg-background">
+      <section className="py-12 sm:py-16 bg-background">
         <LandingCVScan/>
       </section>
 
       {/* Enhanced Trust and Problem Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-12 sm:py-16 bg-muted/30">
         <TrustAndProblem />
       </section>
 
       {/* Enhanced Coaches Section */}
-      <section className="py-16 bg-background">
+      <section className="py-12 sm:py-16 bg-background">
         <LandingCoaches />
       </section>
 
       {/* Enhanced Pricing Preview with Card Components */}
-      <section className="py-16 bg-background">
+      <section className="py-12 sm:py-16 bg-background">
         <div className="container mx-auto px-4">
           <PricingPreview />
         </div>
       </section>
 
       {/* Enhanced Testimonials Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-12 sm:py-16 bg-muted/30">
         <LandingTestimonials/>
       </section>
 

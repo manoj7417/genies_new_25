@@ -77,23 +77,24 @@ const LandingHeader = () => {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t border-border">
+            <div className="px-4 pt-4 pb-6 space-y-3 bg-background border-t border-border">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-primary block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150"
+                  className="text-foreground hover:text-primary block px-3 py-3 rounded-md text-base font-medium transition-colors duration-150"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <div className="pt-4 space-y-2">
-                <Button variant="ghost" className="w-full justify-start" size="sm" onClick={() => {
+              <div className="pt-6 space-y-3 border-t border-border">
+                <Button variant="ghost" className="w-full justify-start text-base py-3" size="sm" onClick={() => {
                   window.location.href = 'https://www.geniescareerhub.com/login';
                 }}>
                   Sign In
                 </Button>
-                <Button className="w-full" size="sm" onClick={() => {
+                <Button className="w-full text-base py-3" size="sm" onClick={() => {
                   window.location.href = 'https://www.geniescareerhub.com/cv-studio';
                 }}>
                   Get Started

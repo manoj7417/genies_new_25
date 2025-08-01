@@ -155,21 +155,21 @@ const LandingHero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl  mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center w-full h-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center w-full h-full">
           {/* Left Side - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-left"
+            className="text-center lg:text-left order-2 lg:order-1"
           >
             {/* Main Heading */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-[27px] md:text-4xl lg:text-6xl font-[700] text-foreground leading-[1.15] mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-[700] text-foreground leading-[1.15] mb-4 lg:mb-6"
             >
               Turn Rejections into <span className='text-blue-800'>Interviews.</span>
             </motion.h1>
@@ -179,7 +179,7 @@ const LandingHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="text-[15px] md:text-[17px] text-muted-foreground leading-[1.4] mb-8"
+              className="text-sm sm:text-base md:text-lg text-muted-foreground leading-[1.4] mb-6 lg:mb-8 px-4 lg:px-0"
             >
               Connect with employers on a platform they trust with our AI-powered career solutions.
             </motion.p>
@@ -189,23 +189,23 @@ const LandingHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 items-start"
+              className="flex flex-col sm:flex-row gap-3 lg:gap-4 items-center lg:items-start justify-center lg:justify-start"
             >
               <Button 
                 size="lg"
-                className="px-8 py-3 text-[13px] font-[600] group bg-blue-950 hover:bg-blue-900 text-white"
+                className="w-full sm:w-auto px-6 lg:px-8 py-3 text-sm lg:text-[13px] font-[600] group bg-blue-950 hover:bg-blue-900 text-white"
                 onClick={() => {
                   window.location.href = 'https://www.geniescareerhub.com/cv-studio';
                 }}
               >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-150" />
+                <ArrowRight className="ml-2 w-4 h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 transition-transform duration-150" />
               </Button>
               
               <Button 
                 variant="ghost"
                 size="lg"
-                className="px-8 py-3 text-[13px] font-[600] group text-foreground underline"
+                className="w-full sm:w-auto px-6 lg:px-8 py-3 text-sm lg:text-[13px] font-[600] group text-foreground underline"
                 onClick={() => {
                   window.location.href = 'https://www.geniescareerhub.com/career-coaching';
                 }}
@@ -221,17 +221,17 @@ const LandingHero = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="relative"
+            className="relative order-1 lg:order-2"
           >
-                                      <div className="border-0 overflow-hidden">
-               <div>
-                 <img
-                   src="/banner-img-2.png"
-                   alt="Hero Banner"
-                   className="w-full h-[500px] object-cover"
-                 />
-               </div>
-             </div>
+            <div className="border-0 overflow-hidden rounded-lg lg:rounded-none">
+              <div>
+                <img
+                  src="/banner-img-2.png"
+                  alt="Hero Banner"
+                  className="w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] object-cover"
+                />
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

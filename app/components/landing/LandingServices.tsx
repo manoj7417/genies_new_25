@@ -72,7 +72,7 @@ const LandingServices = () => {
             {/* CV Builder Slide */}
             <SwiperSlide>
               <Card className="border-0 shadow-lg bg-muted/30 min-h-[450px]">
-                <CardContent className="p-12">
+                <CardContent className="lg:p-12 p-0">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -121,7 +121,7 @@ const LandingServices = () => {
                       viewport={{ once: true }}
                     >
                       <Card className="border shadow-sm overflow-hidden">
-                        <CardContent className="p-6">
+                        <CardContent className="lg:p-6 p-0">
                           <img 
                             src="/cv-builder.png" 
                             alt="CV Builder Interface" 
@@ -138,7 +138,7 @@ const LandingServices = () => {
             {/* CV Analyser Slide */}
             <SwiperSlide>
               <Card className="border-0 shadow-lg bg-blue-50/50 min-h-[450px]">
-                <CardContent className="p-12">
+                <CardContent className="lg:p-12 p-0">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -189,7 +189,7 @@ const LandingServices = () => {
                       viewport={{ once: true }}
                     >
                       <Card className="border shadow-sm overflow-hidden">
-                        <CardContent className="p-6">
+                        <CardContent className="lg:p-6 p-0">
                           <img 
                             src="/ats-score.png" 
                             alt="CV Analyser Interface" 
@@ -206,7 +206,7 @@ const LandingServices = () => {
             {/* CV Match Slide */}
             <SwiperSlide>
               <Card className="border-0 shadow-lg bg-orange-50/50 min-h-[450px]">
-                <CardContent className="p-12">
+                <CardContent className="lg:p-12 p-0">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -257,7 +257,7 @@ const LandingServices = () => {
                       viewport={{ once: true }}
                     >
                       <Card className="border shadow-sm overflow-hidden">
-                        <CardContent className="p-6">
+                        <CardContent className="lg:p-6 p-0">
                           <img 
                             src="/resume11.png" 
                             alt="CV Match Interface" 
@@ -274,7 +274,7 @@ const LandingServices = () => {
             {/* AI-Human Coaches Slide */}
             <SwiperSlide>
               <Card className="border-0 shadow-lg bg-purple-50/50 min-h-[450px]">
-                <CardContent className="p-12">
+                <CardContent className="lg:p-12 p-0">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -307,7 +307,7 @@ const LandingServices = () => {
                             size="lg"
                             className="px-8 py-3 text-[13px] font-[400] group bg-blue-950 hover:bg-blue-900 text-white"
                             onClick={() => {
-                              window.location.href = 'https://www.geniescareerhub.com/career-counselling';
+                              window.location.href = 'https://www.geniescareerhub.com/login?redirect=%2Fcareer-counselling';
                             }}
                           >
                             Connect with AI Coaches
@@ -325,7 +325,7 @@ const LandingServices = () => {
                       viewport={{ once: true }}
                     >
                       <Card className="border shadow-sm overflow-hidden">
-                        <CardContent className="p-6">
+                        <CardContent className="lg:p-6 p-0">
                           <img 
                             src="/ai-human-coahes.webp" 
                             alt="AI-Human Coaches Interface" 
@@ -342,7 +342,7 @@ const LandingServices = () => {
             {/* Jobs Slide */}
             <SwiperSlide>
               <Card className="border-0 shadow-lg bg-green-50/50 min-h-[450px]">
-                <CardContent className="p-12">
+                <CardContent className="lg:p-12 p-0">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -393,7 +393,7 @@ const LandingServices = () => {
                       viewport={{ once: true }}
                     >
                       <Card className="border shadow-sm overflow-hidden">
-                        <CardContent className="p-6">
+                        <CardContent className="lg:p-6 p-0">
                           <img 
                             src="/jobtransition.png" 
                             alt="Jobs Interface" 
@@ -464,7 +464,7 @@ const LandingServices = () => {
             {/* Recruitment Slide */}
             <SwiperSlide>
               <Card className="border-0 shadow-lg bg-red-50/50 min-h-[450px]">
-                <CardContent className="p-12">
+                <CardContent className="lg:p-12 p-0">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -513,7 +513,7 @@ const LandingServices = () => {
                       viewport={{ once: true }}
                     >
                       <Card className="border shadow-sm overflow-hidden">
-                        <CardContent className="p-6">
+                        <CardContent className="lg:p-6 p-0">
                           <img 
                             src="/recruitment.jpg" 
                             alt="Job Posting Interface" 
@@ -530,7 +530,7 @@ const LandingServices = () => {
             {/* Coaching For Employees Slide */}
             <SwiperSlide>
               <Card className="border-0 shadow-lg bg-teal-50/50 min-h-[450px]">
-                <CardContent className="p-12">
+                <CardContent className="lg:p-12 p-0">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Left Panel - Marketing Content */}
                     <motion.div
@@ -579,7 +579,7 @@ const LandingServices = () => {
                       viewport={{ once: true }}
                     >
                       <Card className="border shadow-sm overflow-hidden">
-                        <CardContent className="p-6">
+                        <CardContent className="lg:p-6 p-0">
                           <img 
                             src="/coaching-employee.webp" 
                             alt="Analytics Dashboard Interface" 
