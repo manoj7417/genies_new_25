@@ -104,7 +104,7 @@ const LandingServices = () => {
                           size="lg"
                           className="px-8 py-3 text-[13px] font-[400] group bg-blue-950 hover:bg-blue-900 text-white"
                           onClick={() => {
-                            window.location.href = 'https://www.geniescareerhub.com/resume';
+                            window.location.href = 'https://www.geniescareerhub.com/resume-builder';
                           }}
                         >
                           CV Builder

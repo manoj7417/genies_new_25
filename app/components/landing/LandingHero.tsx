@@ -195,7 +195,7 @@ const LandingHero = () => {
                 size="lg"
                 className="w-full sm:w-auto px-6 lg:px-8 py-3 text-sm lg:text-[13px] font-[600] group bg-blue-950 hover:bg-blue-900 text-white"
                 onClick={() => {
-                  window.location.href = 'https://www.geniescareerhub.com/cv-studio';
+                  document.getElementById('cv-scan')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 Get Started

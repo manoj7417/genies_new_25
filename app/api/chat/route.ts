@@ -1,6 +1,15 @@
 import { NextResponse } from 'next/server';
 import path from 'path';
 import { promises as fs } from 'fs';
+import OpenAI from 'openai';
+
+// Initialize OpenAI client
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+});
+
+// Configuration for OpenAI enhancement
+const OPENAI_ENHANCEMENT_ENABLED = process.env.OPENAI_ENHANCEMENT_ENABLED !== 'false'; // Default to true
 
 // Smart query matcher - maps user intents to JSON sections
 function getRelevantSections(query: string, data: any) {
@@ -137,6 +146,74 @@ function getDataByPath(data: any, path: string) {
     return current;
 }
 
+// Enhanced OpenAI response generation
+async function generateEnhancedResponse(userQuery: string, baseResponse: string, contextData: any) {
+    try {
+        // Check if OpenAI enhancement is enabled
+        if (!OPENAI_ENHANCEMENT_ENABLED) {
+            console.log('OpenAI enhancement disabled, using base response');
+            return baseResponse;
+        }
+
+        // Check if OpenAI API key is available
+        if (!process.env.OPENAI_API_KEY) {
+            console.log('OpenAI API key not found, using base response');
+            return baseResponse;
+        }
+
+        const systemPrompt = `You are an AI career assistant for Geniess Career Hub. Your role is to enhance and refine responses to make them more accurate, helpful, and engaging. 
+
+Context about Geniess Career Hub:
+- We provide career coaching, CV building, job matching, and recruitment services
+- We have AI-powered tools and expert coaches
+- We serve both job seekers and recruiters
+- We focus on career development and professional growth
+- We help with career transitions, skill development, and professional branding
+
+Guidelines:
+1. Keep responses professional yet friendly and approachable
+2. Maintain the original structure, links, and HTML formatting
+3. Add relevant career insights and industry knowledge when appropriate
+4. Make responses more engaging and actionable
+5. Preserve all HTML formatting and styling exactly as provided
+6. Don't change the core information, just enhance the delivery
+7. Add personalized touches based on the user's query context
+8. Provide actionable next steps when relevant
+9. Use emojis sparingly but effectively to make responses more engaging
+10. Address the user's specific needs and concerns
+11. Add motivational elements when appropriate
+12. Include relevant statistics or industry insights when helpful
+
+Base response to enhance: ${baseResponse}
+
+User query: ${userQuery}`;
+
+        const completion = await openai.chat.completions.create({
+            model: "gpt-3.5-turbo",
+            messages: [
+                {
+                    role: "system",
+                    content: systemPrompt
+                },
+                {
+                    role: "user",
+                    content: `Please enhance this response to make it more accurate and helpful while preserving all formatting and links: ${userQuery}`
+                }
+            ],
+            max_tokens: 1000,
+            temperature: 0.7,
+        });
+
+        const enhancedResponse = completion.choices[0]?.message?.content || baseResponse;
+        console.log('OpenAI enhancement successful');
+        return enhancedResponse;
+    } catch (error) {
+        console.error('OpenAI enhancement failed:', error);
+        console.log('Falling back to base response');
+        return baseResponse; // Fallback to original response
+    }
+}
+
 // Format response based on data structure
 function formatResponse(data: any, sectionName: string) {
     let response = '';
@@ -205,6 +282,7 @@ export async function POST(request: Request) {
         const query = message.toLowerCase();
 
         console.log('User query:', query);
+        console.log('OpenAI enhancement enabled:', OPENAI_ENHANCEMENT_ENABLED);
 
         // Fix the file path to use correct filename
         const filePath = path.join(process.cwd(), 'app', 'data', 'genies_career_hub.json');
@@ -237,7 +315,66 @@ export async function POST(request: Request) {
             'help me build cv'
         ];
 
+        // Check for CV score checking requests
+        const cvScorePatterns = [
+            'i want to check cv score',
+            'check cv score',
+            'cv score',
+            'resume score',
+            'check resume score',
+            'i want to check resume score',
+            'cv analyzer',
+            'resume analyzer',
+            'analyze cv',
+            'analyze resume',
+            'cv analysis',
+            'resume analysis',
+            'check my cv',
+            'check my resume',
+            'evaluate cv',
+            'evaluate resume',
+            'cv evaluation',
+            'resume evaluation',
+            'score my cv',
+            'score my resume',
+            'cv scoring',
+            'resume scoring',
+            'test cv',
+            'test resume',
+            'cv test',
+            'resume test'
+        ];
+
         const isCVCreationRequest = cvCreationPatterns.some(pattern => query.includes(pattern));
+        const isCVScoreRequest = cvScorePatterns.some(pattern => query.includes(pattern));
+
+        if (isCVScoreRequest) {
+            // Provide a direct response for CV score checking requests
+            const cvScoreResponse = `
+                <b>Great! I can help you check your CV score and get detailed analysis. 📊</b><br/><br/>
+                
+                <b>Geniess Career Hub</b> offers advanced CV analysis tools to evaluate your resume:<br/><br/>
+                
+                <b>🎯 What our CV Analyzer provides:</b>
+                <ul>
+                    <li><b>ATS Compatibility Score:</b> See how well your CV passes Applicant Tracking Systems</li>
+                    <li><b>Content Analysis:</b> Get detailed feedback on your CV content and structure</li>
+                    <li><b>Keyword Optimization:</b> Identify missing keywords for your target roles</li>
+                    <li><b>Formatting Review:</b> Check for formatting issues that could hurt your chances</li>
+                    <li><b>Industry-Specific Tips:</b> Get tailored advice for your field</li>
+                    <li><b>Improvement Suggestions:</b> Receive actionable recommendations to enhance your CV</li>
+                </ul><br/>
+                
+                <b>✨ Get instant feedback and actionable insights to make your CV stand out to employers!</b><br/><br/>
+                
+                Ready to analyze your CV and improve your score? Click below to get started:<br/>
+                <a href="https://www.geniescareerhub.com/resume-analyzer" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#172554;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Check Your CV Score Now →</a>
+            `;
+
+            // Enhance response with OpenAI
+            const enhancedResponse = await generateEnhancedResponse(query, cvScoreResponse, data);
+            return NextResponse.json({ response: enhancedResponse });
+        }
 
         if (isCVCreationRequest) {
             // Provide a direct response for CV creation requests
@@ -262,7 +399,9 @@ export async function POST(request: Request) {
                 <a href="https://www.geniescareerhub.com/cv-studio" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#172554;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Update or Build Your Resume Now →</a>
             `;
 
-            return NextResponse.json({ response: cvCreationResponse });
+            // Enhance response with OpenAI
+            const enhancedResponse = await generateEnhancedResponse(query, cvCreationResponse, data);
+            return NextResponse.json({ response: enhancedResponse });
         }
 
         // Check for specific career advice requests
@@ -304,7 +443,9 @@ export async function POST(request: Request) {
                 <a href="https://www.geniescareerhub.com/career-services" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#172554;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Get Career Advice Now →</a>
             `;
 
-            return NextResponse.json({ response: careerAdviceResponse });
+            // Enhance response with OpenAI
+            const enhancedResponse = await generateEnhancedResponse(query, careerAdviceResponse, data);
+            return NextResponse.json({ response: enhancedResponse });
         }
 
         // PRIORITY INTERNSHIP DETECTION - Check this FIRST before any other logic
@@ -354,7 +495,9 @@ export async function POST(request: Request) {
                 <a href="https://www.geniescareerhub.com/internship" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#172554;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Browse Internships →</a>
             `;
 
-            return NextResponse.json({ response: internshipResponse });
+            // Enhance response with OpenAI
+            const enhancedResponse = await generateEnhancedResponse(query, internshipResponse, data);
+            return NextResponse.json({ response: enhancedResponse });
         }
 
         // PRIORITY RECRUITMENT DETECTION - Check this SECOND after internship detection
@@ -446,7 +589,9 @@ export async function POST(request: Request) {
                 <a href="https://www.geniescareerhub.com/recruiter/signin" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#172554;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;margin-top:8px;">Access Recruiter Portal →</a>
             `;
 
-            return NextResponse.json({ response: recruitmentResponse });
+            // Enhance response with OpenAI
+            const enhancedResponse = await generateEnhancedResponse(query, recruitmentResponse, data);
+            return NextResponse.json({ response: enhancedResponse });
         }
 
         // Get relevant sections based on smart matching
@@ -458,18 +603,23 @@ export async function POST(request: Request) {
             const sectionData = getDataByPath(data, relevantPaths[0]);
 
             if (sectionData) {
-                const response = formatResponse(sectionData, relevantPaths[0]);
+                const baseResponse = formatResponse(sectionData, relevantPaths[0]);
                 console.log('Returning formatted response for:', relevantPaths[0]);
-                return NextResponse.json({ response });
+                
+                // Enhance response with OpenAI
+                const enhancedResponse = await generateEnhancedResponse(query, baseResponse, data);
+                return NextResponse.json({ response: enhancedResponse });
             }
         }
 
         // If no relevant sections found, return out-of-scope message
         console.log('No relevant sections found, returning out-of-scope message');
-        return NextResponse.json({
-            response: data.limitations_and_scope.beyond_scope_notice ||
-                "Kindly stick to career discussion only."
-        });
+        const outOfScopeResponse = data.limitations_and_scope.beyond_scope_notice ||
+            "Kindly stick to career discussion only.";
+        
+        // Enhance out-of-scope response with OpenAI
+        const enhancedOutOfScopeResponse = await generateEnhancedResponse(query, outOfScopeResponse, data);
+        return NextResponse.json({ response: enhancedOutOfScopeResponse });
 
     } catch (error) {
         console.error('Error in PDF-based chat API:', error);
